@@ -1,0 +1,31 @@
+{
+  "name": "kubernetes-workshop-slides",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.4.0",
+    "@slidev/theme-default": "latest",
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "lint-staged": "^16.2.5",
+    "playwright-chromium": "^1.56.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-slidev": "^1.0.5",
+    "simple-git-hooks": "^2.13.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bun run lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{md}": [
+      "prettier --write"
+    ]
+  }
+}
