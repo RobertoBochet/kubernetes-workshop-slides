@@ -28,14 +28,12 @@ jobs:
       - name: Pull dependencies
         run: bun install --frozen-lockfile
       - name: Build slides
-        run: bun run build
+        run: bun run build --out _site --base "${{ github.event.repository.name }}"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'dist'
 
   deploy:
     environment:
