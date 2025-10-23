@@ -2,10 +2,9 @@
 title: Kubernetes Workshop
 info: |
   Slides for the Kubernetes workshop
-author: Roberto Bochet <r@robertobochet.me>
+  POuL sysadmin internal course
+author: Roberto Bochet <avrdudo@poul.org>
 keywords: kubernetes,sysadmin,workshop
-sourceCode: https://github.com/RobertoBochet/kubernetes-workshop-slides
-license: CC-BY-SA-4.0
 
 theme: default
 
@@ -13,7 +12,7 @@ transition: slide-left
 
 drawings:
   presenterOnly: true
-presenter: true
+presenter: dev
 browserExporter: false
 download: true
 export:
@@ -21,72 +20,77 @@ export:
   timeout: 30000
   dark: true
   withClicks: false
-  withToc: true
+  withToc: false
 
 remoteAssets: build
 
-colorSchema: auto
+colorSchema: dark
 
 ###############################
-layout: intro
-image: ./kubernetes-bg.svg
-hideInToc: true
+layout: image-right
+image: ./kubernetes-bg.png
+class: text-center
 ---
 
-<div class="mt-[-50px]">All you need to start with Kubernetes</div>
+# Kubernetes Workshop
+
+## All you need to start with kubernetes
+
+Roberto Bochet &lt;avrdudo@poul.org&gt;
+
+<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
+  Press Space for next page <carbon:arrow-right />
+</div>
+
+<div class="abs-br m-6 text-xl">
+  <a href="https://github.com/RobertoBochet/kubernetes-workshop-slides" target="_blank" class="slidev-icon-btn">
+    <carbon:logo-github />
+  </a>
+</div>
 
 ---
-src: ./pages/00-overview.md
----
+
+# What is Kubernetes?
 
 ---
-src: ./pages/10-pods.md
----
+
+# Why should you use Kubernetes?
 
 ---
-src: ./pages/11-services.md
----
+
+# How can I **safely** test Kubernetes?
+
+<v-click>
+
+## Minikube[^1]
+
+...sets up a **development** cluster directly on your machine using **containers**, or **VMs**
+
+</v-click>
+
+<v-click>
+
+```shell
+minikube start --nodes 3
+```
+
+It will deploy a kubernetes cluster composed of 3 nodes
+
+</v-click>
+
+<v-click>
+
+[^1]: https://minikube
+
+</v-click>
 
 ---
-src: ./pages/12-deployments.md
+layout: center
+class: text-center
 ---
 
----
-src: ./pages/13-configmaps-secrets.md
----
+# Learn More
 
----
-src: ./pages/14-namespaces.md
----
+[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
 
----
-src: ./pages/20-helm.md
----
-
----
-src: ./pages/21-ingresses.md
----
-
----
-src: ./pages/22-custom-resource-definitions.md
----
-
----
-src: ./pages/23-annotations.md
----
-
----
-src: ./pages/24-cert-manager.md
----
-
----
-hideInToc: true
----
-
-# Table of contents
-
-<Toc maxDepth="1" columns="2"/>
-
----
-layout: outro
----
+<PoweredBySlidev mt-10 />
