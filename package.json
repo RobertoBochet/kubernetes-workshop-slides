@@ -24,7 +24,7 @@
     "pre-commit": "bun run lint-staged"
   },
   "lint-staged": {
-    "**/*.{md}": [
+    "**/*.md": [
       "prettier --write"
     ]
   }
