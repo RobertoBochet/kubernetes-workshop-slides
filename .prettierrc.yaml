@@ -1,13 +1,8 @@
-printWidth: 120
-semi: false
-singleQuote: false
-trailingComma: none
 overrides:
   - files:
       - slides.md
       - pages/*.md
     options:
-      embeddedLanguageFormatting: off
       parser: slidev
       plugins:
         - prettier-plugin-slidev
