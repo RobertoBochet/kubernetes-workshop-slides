@@ -6,6 +6,7 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
+<<<<<<< HEAD
     "prepare": "simple-git-hooks",
     "lint": "prettier . --check",
     "lint:fix": "prettier . --write"
@@ -15,11 +16,21 @@
     "@iconify-json/vscode-icons": "^1.2.33",
     "@iconify/vue": "^5.0.0",
     "@slidev/cli": "^52.6.0",
+=======
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.4.0",
+>>>>>>> 91c002c (Create package)
     "@slidev/theme-default": "latest",
     "vue": "^3.5.22"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "lint-staged": "^16.2.6",
+=======
+    "lint-staged": "^16.2.5",
+>>>>>>> 91c002c (Create package)
     "playwright-chromium": "^1.56.1",
     "prettier": "^3.6.2",
     "prettier-plugin-slidev": "^1.0.5",
@@ -29,8 +40,16 @@
     "pre-commit": "bun run lint-staged"
   },
   "lint-staged": {
+<<<<<<< HEAD
     "**/*.{md,yaml,yml,ts,vue,css}": [
       "prettier --write"
     ]
   }
 }
+=======
+    "**/*.{md}": [
+      "prettier --write"
+    ]
+  }
+}
+>>>>>>> 91c002c (Create package)
