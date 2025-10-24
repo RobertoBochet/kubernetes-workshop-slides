@@ -1,23 +1,38 @@
 <script setup lang="ts">
-import ImageRight from "@slidev/client/layouts/image-right.vue"
-import { computed } from "vue"
-import { Icon } from "@iconify/vue"
-import { getSourceCode } from "../components/utilities/source_code"
-import { getAuthors, getTitle } from "../components/utilities/metadata"
+import ImageRight from "@slidev/client/layouts/image-right.vue";
+import { computed } from "vue";
+import { Icon } from "@iconify/vue";
 
 const props = defineProps({
+  title: {
+    type: String,
+  },
   image: {
-    type: String
+    type: String,
   },
   backgroundSize: {
     type: String,
-    default: "cover"
-  }
-})
+    default: "cover",
+  },
+});
 
-const title = computed(() => getTitle($slidev))
-const authors = computed(() => getAuthors($slidev))
-const sourceCode = computed(() => getSourceCode($slidev))
+const title = computed(() => props.title ?? $slidev.configs.title);
+
+const authors = computed<{ name: string; email?: string }[]>(() =>
+  $slidev.configs.author
+    ?.split(",")
+    .map((i: string) => i.trim())
+    .map((i: string) => i.match(/^([^<>]+[^ ]) ?(?:<(.*)>)?$/))
+    .map((i: string[]) => ({ name: i[1], email: i[2] })),
+);
+
+const sourceCodeProvider = computed(() => {
+  const sourceCode = $slidev.configs.sourceCode;
+  if (!sourceCode) return null;
+  if (/(https?:\/\/)?github/.test(sourceCode)) return "github";
+  if (/(https?:\/\/)?gitlab/.test(sourceCode)) return "gitlab";
+  return "generic";
+});
 </script>
 
 <template>
@@ -43,10 +58,21 @@ const sourceCode = computed(() => getSourceCode($slidev))
     </div>
 
     <div class="abs-br m-2 text-xl">
-      <a v-if="sourceCode" :href="sourceCode.url" target="_blank" class="slidev-icon-btn font-size-8">
-        <Icon icon="carbon:logo-github" v-if="sourceCode.provider === 'github'" />
-        <Icon icon="carbon:logo-gitlab" v-if="sourceCode.provider === 'gitlab'" />
-        <Icon icon="carbon:logo-git" v-if="sourceCode.provider === 'generic'" />
+      <a
+        v-if="$slidev.configs.sourceCode"
+        :href="$slidev.configs.sourceCode"
+        target="_blank"
+        class="slidev-icon-btn font-size-8"
+      >
+        <Icon
+          icon="carbon:logo-github"
+          v-if="sourceCodeProvider === 'github'"
+        />
+        <Icon
+          icon="carbon:logo-gitlab"
+          v-if="sourceCodeProvider === 'gitlab'"
+        />
+        <Icon icon="carbon:logo-git" v-if="sourceCodeProvider === 'generic'" />
       </a>
     </div>
   </ImageRight>
