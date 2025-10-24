@@ -9,12 +9,14 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@slidev/cli": "^52.4.0",
+    "@slidev/cli": "^52.6.0",
     "@slidev/theme-default": "latest",
+    "@iconify-json/vscode-icons": "^1.2.33",
+    "@iconify/vue": "^5.0.0",
     "vue": "^3.5.22"
   },
   "devDependencies": {
-    "lint-staged": "^16.2.5",
+    "lint-staged": "^16.2.6",
     "playwright-chromium": "^1.56.1",
     "prettier": "^3.6.2",
     "prettier-plugin-slidev": "^1.0.5",
