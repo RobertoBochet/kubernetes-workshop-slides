@@ -2,7 +2,9 @@ name: Deploy slides to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+      - initial
 
   workflow_dispatch:
 
