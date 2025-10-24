@@ -5,6 +5,7 @@ info: |
   POuL sysadmin internal course
 author: Roberto Bochet <avrdudo@poul.org>
 keywords: kubernetes,sysadmin,workshop
+sourceCode: https://github.com/RobertoBochet/kubernetes-workshop-slides
 
 theme: default
 
@@ -12,7 +13,7 @@ transition: slide-left
 
 drawings:
   presenterOnly: true
-presenter: dev
+presenter: true
 browserExporter: false
 download: true
 export:
@@ -27,34 +28,22 @@ remoteAssets: build
 colorSchema: dark
 
 ###############################
-layout: image-right
+layout: intro
 image: ./kubernetes-bg.svg
-class: text-center
+hideInToc: true
 ---
 
-# Kubernetes Workshop
-
-## All you need to start with kubernetes
-
-Roberto Bochet &lt;avrdudo@poul.org&gt;
-
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
-</div>
-
-<div class="abs-br m-6 text-xl">
-    <a href="https://github.com/RobertoBochet/kubernetes-workshop-slides" target="_blank" class="slidev-icon-btn">
-        <carbon:logo-github />
-    </a>
-</div>
+<h2>All you need to start with kubernetes</h2>
 
 ---
 
 # What is Kubernetes?
 
----
+<v-clicks>
 
-# Why should you use Kubernetes?
+Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management.
+
+</v-clicks>
 
 ---
 
@@ -77,6 +66,48 @@ minikube start --nodes 3
 It will deploy a kubernetes cluster composed of 3 nodes
 
 </v-click>
+
+---
+
+## Let's use the glorified podman
+
+<v-click>
+
+```shell
+kubectl run -it --image=alpine iwannabeubuntu sh
+```
+
+<man command="kubectl run">
+Create and run a particular image in a pod.
+</man>
+
+</v-click>
+
+<v-click>
+
+```shell
+kubectl get pods
+```
+
+<man command="kubectl get">
+Display one or many resources.
+</man>
+
+</v-click>
+
+---
+
+# Why should I use Kubernetes?
+
+<div class="text-7 mt-10">
+<v-clicks>
+
+- Standardization
+- Huge market share
+- Declarative approach
+
+</v-clicks>
+</div>
 
 ---
 layout: two-cols-header
@@ -131,6 +162,38 @@ it's no longer your responsibility</p>
 </div>
 
 ---
+
+# Kubernetes resources
+
+These are defined by `yaml` manifests
+
+```yaml {none|1|2|3-5|6|all}{lines: true}
+apiVersion: <api_version>
+kind: <kind_of_resource>
+metadata:
+  name: <resource_name>
+  # other metadata
+# resource specification
+```
+
+<<< @/snippets/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
+
+---
+
+## Create a resource
+
+```shell
+kubectl apply -f resource.yaml
+```
+
+<man command="kubectl apply">
+Apply a configuration to a resource by file name or stdin.
+The resource name must be specified.<br/>
+This resource will be created if it doesn't exist yet.<br/><br/>
+JSON and YAML formats are accepted.
+</man>
+
+---
 layout: center
 class: text-center
 ---
@@ -139,18 +202,7 @@ class: text-center
 
 <br/>
 
-```mermaid {scale: 0.8}
-sequenceDiagram
-    actor Admin as Administrator
-    participant API as Kubernetes API
-    participant Database@{ "type" : "database" }
-
-Admin->>+API: kubectl apply -f resource.yaml
-API->>API: Schema validation
-API->>+Database: UPDATE
-Database--)-API: Done
-API--)-Admin: Done
-```
+<<< @/snippets/diagrams/kubeapi.mermaid mermaid
 
 ---
 layout: center
@@ -161,32 +213,22 @@ class: text-center
 
 <br/>
 
-```mermaid {scale: 0.65}
-sequenceDiagram
-    participant Controller as Controller
-    participant API as Kubernetes API
-    participant Database@{ "type" : "database" }
-participant Node as Kubernetes Node
-
-Controller->>+API: Requests desired status
-API->>+Database: GET
-Database--)-API: Response
-API--)-Controller: Desired status
-Controller<<->>Node: Verifies real status
-Controller->>Node: Makes changes
-Controller->>+API: Update real cluster status
-API->>+Database: UPDATE
-Database--)-API: Done
-API--)-Controller: Done
-```
+<<< @/snippets/diagrams/controller.mermaid mermaid {scale: 0.65}
 
 ---
-layout: center
-class: text-center
+
+# Pods
+
+<<< @/snippets/pod-echo-server.yaml yaml {\*}{lines:true}
+
+---
+hideInToc: true
 ---
 
-# Learn More
+## Table of contents
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<Toc maxDepth="1" columns="1"/>
 
-<PoweredBySlidev mt-10 />
+---
+layout: outro
+---
