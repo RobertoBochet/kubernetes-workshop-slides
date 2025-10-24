@@ -1,0 +1,10 @@
+sequenceDiagram
+    actor Admin as Administrator
+    participant API as Kubernetes API
+    participant Database@{ "type" : "database" }
+
+Admin->>+API: kubectl apply -f resource.yaml
+API->>API: Schema validation
+API->>+Database: UPDATE
+Database--)-API: Done
+API--)-Admin: Done

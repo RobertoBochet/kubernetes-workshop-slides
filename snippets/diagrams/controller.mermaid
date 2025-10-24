@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Controller as Controller
+    participant API as Kubernetes API
+    participant Database@{ "type" : "database" }
+    participant Node as Kubernetes Node
+
+Controller->>+API: Requests desired status
+API->>+Database: GET
+Database--)-API: Response
+API--)-Controller: Desired status
+Controller<<->>Node: Verifies real status
+Controller->>Node: Makes changes
+Controller->>+API: Update real cluster status
+API->>+Database: UPDATE
+Database--)-API: Done
+API--)-Controller: Done
