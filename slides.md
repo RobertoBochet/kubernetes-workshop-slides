@@ -222,6 +222,18 @@ class: text-center
 <<< @/snippets/pod-echo-server.yaml yaml {\*}{lines:true}
 
 ---
+layout: coming-soon
+---
+
+# Services
+
+---
+layout: coming-soon
+---
+
+# Deployments
+
+---
 hideInToc: true
 ---
 
