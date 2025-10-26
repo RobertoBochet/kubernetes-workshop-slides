@@ -6,13 +6,15 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write"
   },
   "dependencies": {
-    "@slidev/cli": "^52.6.0",
-    "@slidev/theme-default": "latest",
     "@iconify-json/vscode-icons": "^1.2.33",
     "@iconify/vue": "^5.0.0",
+    "@slidev/cli": "^52.6.0",
+    "@slidev/theme-default": "latest",
     "vue": "^3.5.22"
   },
   "devDependencies": {
@@ -26,7 +28,7 @@
     "pre-commit": "bun run lint-staged"
   },
   "lint-staged": {
-    "**/*.md": [
+    "**/*": [
       "prettier --write"
     ]
   }
