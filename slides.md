@@ -33,7 +33,7 @@ image: ./kubernetes-bg.svg
 hideInToc: true
 ---
 
-<h2>All you need to start with kubernetes</h2>
+<h2>All you need to start with Kubernetes</h2>
 
 ---
 
@@ -53,7 +53,7 @@ Kubernetes is an open-source container orchestration system for automating softw
 
 ## [Minikube](https://minikube.sigs.k8s.io/docs/)
 
-...sets up a **development** cluster directly on your machine using **containers**, or **VMs**
+...creates a test cluster right on your computer using either **containers** or **VMs**
 
 </v-click>
 
@@ -63,13 +63,31 @@ Kubernetes is an open-source container orchestration system for automating softw
 minikube start --nodes 3
 ```
 
-It will deploy a kubernetes cluster composed of 3 nodes
+This deploys a development Kubernetes cluster composed of 3 nodes
 
 </v-click>
+
+<div class="pt-6" />
+
+<v-click>
+
+```shell
+kubectl get nodes
+```
+
+To check if the 3 nodes are correctly set up
+
+</v-click>
+
+<man command="kubectl" v-click>
+kubectl controls the Kubernetes cluster manager.
+</man>
 
 ---
 
 ## Let's use the glorified podman
+
+<div class="pt-6" />
 
 <v-click>
 
@@ -83,6 +101,8 @@ Create and run a particular image in a pod.
 
 </v-click>
 
+<div class="pt-6" />
+
 <v-click>
 
 ```shell
@@ -95,27 +115,18 @@ Display one or many resources.
 
 </v-click>
 
----
-
-# Why should I use Kubernetes?
-
-<div class="text-7 mt-10">
-<v-clicks>
-
-- Standardization
-- Huge market share
-- Declarative approach
-
-</v-clicks>
-</div>
+<v-click>
+  <p class="text-8 pt-10">That's it? Then why use Kubernetes?</p>
+</v-click>
 
 ---
 layout: two-cols-header
+title: Useful definitions
 ---
 
 <div class="text-center">
 
-## Imperative vs Declarative
+# Imperative vs Declarative
 
 </div>
 
@@ -125,7 +136,7 @@ layout: two-cols-header
 
 <p v-click="1">I specify a task to be executed</p>
 
-<i v-click="3">e.g., "Clean the room!"</i>
+<i v-click="3">e.g., "Clean the room"</i>
 
 <p v-click="5">You have to perform the required task,
 and once completed,
@@ -198,22 +209,52 @@ layout: center
 class: text-center
 ---
 
-## Administrator requests cluster change
+## You require a resource...
 
-<br/>
+<div class="pt-4"></div>
 
-<<< @/snippets/diagrams/kubeapi.mermaid mermaid
+<<< @/snippets/diagrams/kubeapi.mermaid mermaid {scale: 0.95}
 
 ---
 layout: center
 class: text-center
 ---
 
-## Operator updates cluster status according to desired one
+## ...a controller provisions it
 
-<br/>
+<div class="pt-4"></div>
 
 <<< @/snippets/diagrams/controller.mermaid mermaid {scale: 0.65}
+
+---
+
+## Operator pattern
+
+<div class="pt-4" />
+
+This is what makes Kubernetes really powerful
+
+<span v-click>You require a resource...</span> <span v-click><carbon-arrow-right class="mb-[-4px]" /> ...a controller provisions it</span>
+
+<p v-click class="text-5 pt-20">A little spoiler:</p>
+<p v-after class="font-italic">Relying on this mechanism, you can extend the Kubernetes functionality,<br/>creating custom resource schemas and controllers.</p>
+
+<p v-click>We'll come back to it later</p>
+
+---
+
+# So, why should I use Kubernetes?
+
+<div class="text-7 mt-10">
+<v-clicks>
+
+- It's the industry standard
+- Everyone's using it
+- Tell it what you want, not how to do it
+- You can extend it however you need (through the Operator pattern)
+
+</v-clicks>
+</div>
 
 ---
 
