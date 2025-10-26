@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import ImageRight from "@slidev/client/layouts/image-right.vue";
-import { computed } from "vue";
-import { Icon } from "@iconify/vue";
+import ImageRight from "@slidev/client/layouts/image-right.vue"
+import { computed } from "vue"
+import { Icon } from "@iconify/vue"
 
 const props = defineProps({
   title: {
-    type: String,
+    type: String
   },
   image: {
-    type: String,
+    type: String
   },
   backgroundSize: {
     type: String,
-    default: "cover",
-  },
-});
+    default: "cover"
+  }
+})
 
-const title = computed(() => props.title ?? $slidev.configs.title);
+const title = computed(() => props.title ?? $slidev.configs.title)
 
 const authors = computed<{ name: string; email?: string }[]>(() =>
   $slidev.configs.author
     ?.split(",")
     .map((i: string) => i.trim())
     .map((i: string) => i.match(/^([^<>]+[^ ]) ?(?:<(.*)>)?$/))
-    .map((i: string[]) => ({ name: i[1], email: i[2] })),
-);
+    .map((i: string[]) => ({ name: i[1], email: i[2] }))
+)
 
 const sourceCodeProvider = computed(() => {
-  const sourceCode = $slidev.configs.sourceCode;
-  if (!sourceCode) return null;
-  if (/(https?:\/\/)?github/.test(sourceCode)) return "github";
-  if (/(https?:\/\/)?gitlab/.test(sourceCode)) return "gitlab";
-  return "generic";
-});
+  const sourceCode = $slidev.configs.sourceCode
+  if (!sourceCode) return null
+  if (/(https?:\/\/)?github/.test(sourceCode)) return "github"
+  if (/(https?:\/\/)?gitlab/.test(sourceCode)) return "gitlab"
+  return "generic"
+})
 </script>
 
 <template>

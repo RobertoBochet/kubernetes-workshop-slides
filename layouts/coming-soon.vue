@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Center from "@slidev/client/layouts/center.vue";
+import Center from "@slidev/client/layouts/center.vue"
 </script>
 
 <template>
