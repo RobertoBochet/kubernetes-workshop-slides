@@ -257,10 +257,14 @@ This is what makes Kubernetes really powerful
 </div>
 
 ---
+layout: two-cols
+---
 
 # [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
 
 They are the smallest deployable units of computing that you can create and manage in Kubernetes
+
+::right::
 
 <<< @/snippets/manifests/pod-echo-server.yaml yaml[pod-echo-server.yaml]{hide|all|1-2|3-4|6-11|7|8|9-11|12|all}{lines:true}
 
@@ -287,13 +291,16 @@ kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://<i
 -->
 
 ---
+layout: two-cols
 transition: fade
 ---
 
 # [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-They act as an abstraction layer that exposes the applications in the running pods to other services or external clients.
+They act as an abstraction layer that exposes the applications in the running pods to other services or external clients.<br/>
 They provide a stable endpoint and load balancing features for accessing pods within the cluster
+
+::right::
 
 <<< @/snippets/manifests/service-echo-server.yaml yaml[service-echo-server.yaml]{hide|all|1-2|3-4|6|9-12|7-8|all}{lines:true}
 
@@ -355,6 +362,7 @@ selector:
 </v-click>
 
 ---
+layout: two-cols
 transition: fade
 hideInToc: true
 ---
@@ -362,6 +370,8 @@ hideInToc: true
 # [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
 So, the pod we want to expose needs labels that match the service selector
+
+::right::
 
 ````md magic-move[pod-echo-server.yaml]{lines:true}
 <<< @/snippets/manifests/pod-echo-server.yaml yaml{all}
@@ -379,6 +389,7 @@ kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://ec
 -->
 
 ---
+layout: two-cols
 hideInToc: true
 ---
 
@@ -386,6 +397,12 @@ hideInToc: true
 
 A `ClusterIP` service can't be reached from outside the cluster.<br/>
 To expose it externally, use a `NodePort` service.
+
+<small v-click="4">Available service types in addition to the default [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip) are [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), [LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer), and [ExternalName](https://kubernetes.io/docs/concepts/services-networking/service/#externalname)</small>
+
+<small v-click="6">Note: Kubernetes only allows node ports in the range 30000-32767 by default</small>
+
+::right::
 
 <v-click>
 
@@ -396,10 +413,6 @@ To expose it externally, use a `NodePort` service.
 ````
 
 </v-click>
-
-<small v-click="4">Available service types in addition to the default [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip) are [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport), [LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer), and [ExternalName](https://kubernetes.io/docs/concepts/services-networking/service/#externalname)</small>
-
-<small v-click="6">Note: Kubernetes only allows node ports in the range 30000–32767 by default</small>
 
 <!--
 [click] Old ClusterIP service
@@ -418,10 +431,78 @@ curl http://<node-ip>:30808 | jq
 -->
 
 ---
-layout: coming-soon
+layout: two-cols
+transition: fade
 ---
 
-# Deployments
+# [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+These manages a set of Pods to run an application workload, usually one that doesn't maintain state.
+
+<small v-click="5">Deployments and pods are bound by the Labels/Selectors system</small>
+
+<small v-click="8">Note: deployments do not directly create pods; they use an intermediate resource called [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)</small>
+
+::right::
+
+<<< @/snippets/manifests/deployment-echo-server.yaml yaml[deployment-echo-server.yaml]{hide|all|1-2|3-4|10-22|7-9,13-14|6|all}{lines: true}
+
+<!--
+[click:2] `apiVersion` and `kind`
+
+[click] `metadata`
+
+[click] `template`
+
+[click] `selector` and `labels`
+
+[click] `replicas`
+
+```shell
+kubectl delete pods/echo-server # remove old pod
+kubectl apply -f deployment-echo-server.yaml
+kubectl get deployments
+kubectl get pods -o wide
+curl http://<node-ip>:30808
+kubectl delete pods/echo-server-##########-#####
+kubectl get pods -o wide
+kubectl get pods -o wide
+curl http://<node-ip>:30808 # curl still works
+```
+-->
+
+---
+hideInToc: true
+---
+
+# [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+Deployments are one of the Kubernetes resources that help ensure Highly Availability(HA) of services
+
+<v-click>
+
+```shell
+kubectl scale --replicas 1 deployment echo-server
+```
+
+<man command="kubectl scale">
+Set a new size for a deployment, replica set, replication controller, or stateful set.
+</man>
+
+</v-click>
+
+<!--
+```shell
+kubectl scale --replicas 1 deployment echo-server
+kubectl get deployments
+kubectl get pods -o wide
+kubectl scale --replicas 9 deployment echo-server
+kubectl get deployments
+kubectl get pods -o wide
+curl http://<node-ip>:30808
+kubectl scale --replicas 3 deployment echo-server
+```
+-->
 
 ---
 hideInToc: true
