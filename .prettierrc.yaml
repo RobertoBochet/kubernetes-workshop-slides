@@ -6,6 +6,7 @@ overrides:
       - slides.md
       - pages/*.md
     options:
+      embeddedLanguageFormatting: off
       parser: slidev
       plugins:
         - prettier-plugin-slidev
