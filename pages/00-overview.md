@@ -189,7 +189,7 @@ class: text-center
 
 ---
 
-## Operator pattern
+## [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
 <div class="pt-4" />
 
