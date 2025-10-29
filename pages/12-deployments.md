@@ -1,6 +1,7 @@
 ---
 layout: two-cols
 transition: fade
+title: Deployments
 ---
 
 # [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)

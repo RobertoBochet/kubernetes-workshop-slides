@@ -22,11 +22,11 @@ export:
   timeout: 30000
   dark: true
   withClicks: false
-  withToc: false
+  withToc: true
 
 remoteAssets: build
 
-colorSchema: dark
+colorSchema: auto
 
 ###############################
 layout: intro
@@ -56,7 +56,7 @@ src: ./pages/12-deployments.md
 hideInToc: true
 ---
 
-## Table of contents
+# Table of contents
 
 <Toc maxDepth="1" columns="1"/>
 

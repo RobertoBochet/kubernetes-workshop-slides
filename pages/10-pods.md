@@ -1,5 +1,6 @@
 ---
 layout: two-cols
+title: Pods
 ---
 
 # [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
