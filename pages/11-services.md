@@ -1,6 +1,7 @@
 ---
 layout: two-cols
 transition: fade
+title: Services
 ---
 
 # [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
@@ -32,6 +33,7 @@ kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://ec
 
 ---
 transition: fade
+hideInToc: true
 ---
 
 ## [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
