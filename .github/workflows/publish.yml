@@ -29,6 +29,8 @@ jobs:
           bun-version: latest
       - name: Pull dependencies
         run: bun install --frozen-lockfile
+      - name: Set source code url
+        run: sed -i "s|^sourceCode:.*|sourceCode:\ ${{github.server_url}}/${{github.repository}}|" ./slides.md
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
