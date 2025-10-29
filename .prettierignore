@@ -1,6 +1,2 @@
 .prettierignore
-*.lock
 *.svg
-*.mermaid
-**/helm/templates.yaml
-LICENSE
