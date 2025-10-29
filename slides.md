@@ -6,6 +6,7 @@ info: |
 author: Roberto Bochet <avrdudo@poul.org>
 keywords: kubernetes,sysadmin,workshop
 sourceCode: https://github.com/RobertoBochet/kubernetes-workshop-slides
+license: CC-BY-SA-4.0
 
 theme: default
 
@@ -33,7 +34,7 @@ image: ./kubernetes-bg.svg
 hideInToc: true
 ---
 
-<h2>All you need to start with Kubernetes</h2>
+<div class="mt-[-50px]">All you need to start with Kubernetes</div>
 
 ---
 src: ./pages/00-overview.md
