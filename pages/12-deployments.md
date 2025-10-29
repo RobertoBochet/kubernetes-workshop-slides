@@ -1,12 +1,11 @@
 ---
 layout: two-cols
 transition: fade
-title: Deployments
 ---
 
 # [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
-These manage a set of Pods to run an application workload, usually one that doesn't maintain state.
+These manages a set of Pods to run an application workload, usually one that doesn't maintain state.
 
 <small v-click="5">Deployments and pods are bound by the Labels/Selectors system</small>
 
@@ -14,7 +13,7 @@ These manage a set of Pods to run an application workload, usually one that does
 
 ::right::
 
-<<< @/snippets/manifests/deployments/deployment-echo-server.yaml yaml[deployment-echo-server.yaml]{hide|all|1-2|3-4|10-22|7-9,13-14|6|all}{lines: true}
+<<< @/snippets/manifests/deployment-echo-server.yaml yaml[deployment-echo-server.yaml]{hide|all|1-2|3-4|10-22|7-9,13-14|6|all}{lines: true}
 
 <!--
 [click:2] `apiVersion` and `kind`

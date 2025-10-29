@@ -28,7 +28,7 @@ This deploys a development Kubernetes cluster composed of 3 nodes
 
 </v-click>
 
-<v-space size="md" />
+<div class="pt-6" />
 
 <v-click>
 
@@ -48,7 +48,7 @@ kubectl controls the Kubernetes cluster manager.
 
 ## Let's use the glorified podman
 
-<v-space size="md" />
+<div class="pt-6" />
 
 <v-click>
 
@@ -62,7 +62,7 @@ Create and run a particular image in a pod.
 
 </v-click>
 
-<v-space size="md" />
+<div class="pt-6" />
 
 <v-click>
 
@@ -91,7 +91,7 @@ title: Useful definitions
 
 </div>
 
-<v-space size="sm" />
+<br/>
 
 ::left::
 
@@ -148,7 +148,7 @@ metadata:
 # resource specification
 ```
 
-<<< @/snippets/manifests/pods/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
+<<< @/snippets/manifests/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
 
 ---
 
@@ -172,7 +172,7 @@ class: text-center
 
 ## You require a resource...
 
-<v-space size="sm" />
+<div class="pt-4"></div>
 
 <<< @/snippets/diagrams/kubeapi.mermaid mermaid {scale: 0.95}
 
@@ -183,18 +183,15 @@ class: text-center
 
 ## ...a controller provisions it
 
-<v-space size="sm" />
+<div class="pt-4"></div>
 
 <<< @/snippets/diagrams/controller.mermaid mermaid {scale: 0.65}
 
 ---
-title: Operator pattern
-routeAlias: operator-pattern
----
 
-## [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+## Operator pattern
 
-<v-space size="sm" />
+<div class="pt-4" />
 
 This is what makes Kubernetes really powerful
 
@@ -209,9 +206,7 @@ This is what makes Kubernetes really powerful
 
 # So, why should I use Kubernetes?
 
-<v-space size="md" />
-
-<div class="text-7">
+<div class="text-7 mt-10">
 <v-clicks>
 
 - It's the industry standard
