@@ -29,6 +29,6 @@ They are the smallest deployable units of computing that you can create and mana
 ```shell
 kubectl apply -f pod-echo-server.yaml
 kubectl get pods -o wide
-kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://<ip-pod-echo-server> | jq
+kubectl run -it --image=alpine/curl --rm --restart=Never --quiet ottenitore -- http://<ip-pod-echo-server> | jq
 ```
 -->
