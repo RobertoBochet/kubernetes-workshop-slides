@@ -94,7 +94,7 @@ So, the pod we want to expose needs labels that match the service selector
 
 ```shell
 kubectl apply -f pod-echo-server-labels.yaml
-kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://echo-server:8080 | jq
+kubectl run -it --image=alpine/curl --rm --restart=Never --quiet ottenitore -- http://echo-server:8080 | jq
 ```
 -->
 
