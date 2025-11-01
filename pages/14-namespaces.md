@@ -21,7 +21,7 @@ They provide a logical separation between applications
 `kubectl` accepts the argument `-n [namespace]` to refer to the resources in a specific `Namespace`
 
 ```shell
-kubectl -n echo-server get pods
+kubectl get -n echo-server pods
 ```
 
 </v-click>
@@ -40,11 +40,11 @@ kubectl get --all-namespaces echo-server pods
 
 ::right::
 
-<<<@/snippets/manifests/namespaces/namespace-echo-server.yaml yaml[namespace-echo-server.yaml]{*}{lines:true}
+<<<@/snippets/manifests/namespace-echo-server.yaml yaml[namespace-echo-server.yaml]{*}{lines:true}
 
 <div class="mt-5" />
 
-<<<@/snippets/manifests/namespaces/pod-echo-server.yaml yaml[pod-echo-server.yaml]{hide|5}{lines:true,at:1}
+<<<@/snippets/manifests/pod-echo-server-namespace.yaml yaml[pod-echo-server.yaml]{hide|5}{lines:true,at:1}
 
 ---
 layout: two-cols
@@ -64,11 +64,11 @@ This example results in a `Pod` with the status `CreateContainerConfigError` and
 
 ::right::
 
-<<<@/snippets/manifests/namespaces/secret-echo-server.yaml yaml[secret-echo-server.yaml]{hide|5}{lines:true,at:1}
+<<<@/snippets/manifests/secret-echo-server-namespace.yaml yaml[secret-echo-server.yaml]{hide|5}{lines:true,at:1}
 
 <div class="mt-5" />
 
-<<<@/snippets/manifests/namespaces/pod-echo-server-secret.yaml yaml[pod-echo-server.yaml]{hide|5,10-12}{lines:true,at:1}
+<<<@/snippets/manifests/pod-echo-server-namespace-secret.yaml yaml[pod-echo-server.yaml]{hide|5,10-12}{lines:true,at:1}
 
 ---
 hideInToc: true
