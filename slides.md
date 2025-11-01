@@ -57,6 +57,10 @@ src: ./pages/13-configmaps-secrets.md
 ---
 
 ---
+src: ./pages/14-namespaces.md
+---
+
+---
 hideInToc: true
 ---
 
