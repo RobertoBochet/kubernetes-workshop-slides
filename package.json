@@ -11,6 +11,7 @@
     "lint:fix": "prettier . --write"
   },
   "dependencies": {
+    "@iconify-json/logos": "^1.2.10",
     "@iconify-json/vscode-icons": "^1.2.33",
     "@iconify/vue": "^5.0.0",
     "@slidev/cli": "^52.6.0",
