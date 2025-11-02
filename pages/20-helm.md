@@ -139,7 +139,7 @@ The procedure to install a Helm chart is straightforward
 <v-click>
 
 ```shell
-helm install -n echo-server --create-namespace --values ./values.yaml echo-server ealenn/echo-server
+helm install -n echo-server --create-namespace --values ./values.yaml ealenn/echo-server
 ```
 
 <man command="helm install">
