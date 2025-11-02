@@ -1,0 +1,2 @@
+apiBaseUrl: "http://localhost:8090/api"
+apiKey: "secret"
