@@ -9,7 +9,7 @@ They are the smallest deployable units of computing that you can create and mana
 
 ::right::
 
-<<< @/snippets/manifests/pod-echo-server.yaml yaml[pod-echo-server.yaml]{hide|all|1-2|3-4|6-11|7|8|9-11|12|all}{lines:true}
+<<< @/snippets/manifests/pods/pod-echo-server.yaml yaml[pod-echo-server.yaml]{hide|all|1-2|3-4|6-11|7|8|9-11|12|all}{lines:true}
 
 <!--
 [click:2] `apiVersion` and `kind`
