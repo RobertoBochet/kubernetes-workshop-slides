@@ -82,7 +82,7 @@ With the keyword `envFrom`, all the key/value pairs defined in the `ConfigMap` w
 
 ::right::
 
-<<<@/snippets/manifests/configmaps-secrets/pod-echo-server-env.yaml yaml[pod-echo-server-env.yaml]{all|11-13|14-19|all}{lines:true,at:1}
+<<<@/snippets/manifests/configmaps-secrets/pod-echo-server-env.yaml yaml[pod-echo-server-env.yaml]{all|11-13|14-19|11-19}{lines:true,at:1}
 
 <!--
 ```shell
@@ -114,7 +114,7 @@ The whole content of the `configMap` can be mounted to a directory, or alternati
 
 ::right::
 
-<<<@/snippets/manifests/configmaps-secrets/pod-echo-server-volumes.yaml yaml[pod-echo-server-volumes.yaml]{all|20-24|14-19|all}{lines:true,at:1}
+<<<@/snippets/manifests/configmaps-secrets/pod-echo-server-volumes.yaml yaml[pod-echo-server-volumes.yaml]{all|20-24|14-19|14-24}{lines:true,at:1}
 
 <!--
 ```shell
@@ -172,7 +172,7 @@ As with `ConfigMaps`, `Secrets` can be used both in the `envFrom` section...
 
 ::right::
 
-<<<@/snippets/manifests/configmaps-secrets/pod-echo-server-secrets.yaml yaml[pod-echo-server-secrets.yaml]{all|11-13|14-19|all}{lines:true,at:1}
+<<<@/snippets/manifests/configmaps-secrets/pod-echo-server-secrets.yaml yaml[pod-echo-server-secrets.yaml]{all|11-13|14-19|11-19}{lines:true,at:1}
 
 <!--
 ```shell
