@@ -148,7 +148,7 @@ metadata:
 # resource specification
 ```
 
-<<< @/snippets/manifests/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
+<<< @/snippets/manifests/pods/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
 
 ---
 

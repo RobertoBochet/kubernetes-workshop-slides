@@ -11,7 +11,7 @@ They provide a stable endpoint and load balancing features for accessing pods wi
 
 ::right::
 
-<<< @/snippets/manifests/service-echo-server.yaml yaml[service-echo-server.yaml]{hide|all|1-2|3-4|6|9-12|7-8|all}{lines:true}
+<<< @/snippets/manifests/services/service-echo-server.yaml yaml[service-echo-server.yaml]{hide|all|1-2|3-4|6|9-12|7-8|all}{lines:true}
 
 <!--
 [click:2] `apiVersion` and `kind`
@@ -25,7 +25,7 @@ They provide a stable endpoint and load balancing features for accessing pods wi
 [click] Pay attention on `selector` field
 
 ```shell
-kubectl apply -f service-echo-server.yaml
+kubectl apply -f ./snippets/manifests/services/service-echo-server.yaml
 kubectl get services -o wide
 kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://echo-server:8080 #error: Could not connect to server
 ```
@@ -84,16 +84,16 @@ So, the pod we want to expose needs labels that match the service selector
 ::right::
 
 ````md magic-move[pod-echo-server.yaml]{lines:true}
-<<< @/snippets/manifests/pod-echo-server.yaml yaml{all}
+<<< @/snippets/manifests/pods/pod-echo-server.yaml yaml{all}
 
-<<< @/snippets/manifests/pod-echo-server-labels.yaml yaml{5-6|all}
+<<< @/snippets/manifests/services/pod-echo-server.yaml yaml{5-6}
 ````
 
 <!--
 [click] `labels`
 
 ```shell
-kubectl apply -f pod-echo-server-labels.yaml
+kubectl apply -f ./snippets/manifests/services/pod-echo-server.yaml
 kubectl run -it --image=alpine/curl --rm --restart=Never --quiet ottenitore -- http://echo-server:8080 | jq
 ```
 -->
@@ -116,10 +116,10 @@ To expose it externally, use a `NodePort` service.
 
 <v-click>
 
-````md magic-move[service-node-port-echo-server.yaml]{lines:true}
-<<< @/snippets/manifests/service-echo-server.yaml yaml{all}
+````md magic-move[service-echo-server-node-port.yaml]{lines:true}
+<<< @/snippets/manifests/services/service-echo-server.yaml yaml{all}
 
-<<< @/snippets/manifests/service-node-port-echo-server.yaml yaml{all|6|6|13|13|all}
+<<< @/snippets/manifests/services/service-echo-server-node-port.yaml yaml{all|6|6|13|13|all}
 ````
 
 </v-click>
@@ -134,7 +134,7 @@ To expose it externally, use a `NodePort` service.
 [click:2] `nodePort`
 
 ```shell
-kubectl apply -f service-node-port-echo-server.yaml
+kubectl apply -f ./snippets/manifests/services/service-echo-server-node-port.yaml
 kubectl get nodes -o wide
 curl http://<node-ip>:30808 | jq
 ```
