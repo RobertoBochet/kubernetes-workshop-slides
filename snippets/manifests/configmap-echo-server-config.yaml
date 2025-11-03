@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: echo-server-config
-data:
-  LOG_LEVEL: "warning"
-  DEBUG: "true"
