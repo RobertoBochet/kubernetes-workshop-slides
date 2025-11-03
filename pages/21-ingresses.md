@@ -35,12 +35,10 @@ They allow the exposure of multiple HTTP services through the same endpoint, act
 ---
 layout: two-cols-header
 transition: fade
-title: Ingress Controllers
-level: 2
-routeAlias: ingress-controllers
+hideInToc: true
 ---
 
-# [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
+# [Ingresses](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 To use `Ingresses`, a specific controller has to provision it
 
@@ -106,6 +104,7 @@ curl -H "Host: echo.example.org" http://{node_ip}:30080
 
 ---
 layout: two-cols
+transition: fade
 hideInToc: true
 ---
 
