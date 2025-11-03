@@ -188,6 +188,9 @@ class: text-center
 <<< @/snippets/diagrams/controller.mermaid mermaid {scale: 0.65}
 
 ---
+title: Operator pattern
+routeAlias: operator-pattern
+---
 
 ## [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
