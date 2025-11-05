@@ -21,7 +21,7 @@ They provide a logical separation between applications
 `kubectl` accepts the argument `-n [namespace]` to refer to the resources in a specific `Namespace`
 
 ```shell
-kubectl get -n echo-server pods
+kubectl -n echo-server get pods
 ```
 
 </v-click>
