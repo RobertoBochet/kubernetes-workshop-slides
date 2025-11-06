@@ -1,0 +1,8 @@
+apiVersion: linux.io/v1
+kind: Distro
+metadata:
+  name: fedora-iot-42
+spec:
+  name: "Fedora IoT"
+  base: fedora
+  version: "42"

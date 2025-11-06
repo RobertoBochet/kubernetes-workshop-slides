@@ -1,0 +1,8 @@
+apiVersion: linux.io/v1
+kind: Distro
+metadata:
+  name: ubuntu-plucky-puffin
+spec:
+  name: "Ubuntu"
+  base: debian
+  version: "25.04"
