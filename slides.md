@@ -69,12 +69,16 @@ src: ./pages/21-ingresses.md
 ---
 
 ---
+src: ./pages/22-custom-resource-definitions.md
+---
+
+---
 hideInToc: true
 ---
 
 # Table of contents
 
-<Toc maxDepth="1" columns="1"/>
+<Toc maxDepth="1" columns="2"/>
 
 ---
 layout: outro
