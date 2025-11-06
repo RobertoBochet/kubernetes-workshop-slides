@@ -104,7 +104,6 @@ curl -H "Host: echo.example.org" http://{node_ip}:30080
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
