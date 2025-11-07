@@ -2,3 +2,4 @@
 *.lock
 *.svg
 **/helm/templates.yaml
+LICENSE
