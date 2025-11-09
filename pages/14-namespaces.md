@@ -33,7 +33,7 @@ kubectl -n echo-server get pods
 Some of its subcommands (e.g., `get`, `describe`) also support the argument `--all-namespaces` to refer to the resources in all `Namespaces`
 
 ```shell
-kubectl get pods --all-namespaces
+kubectl get --all-namespaces pods
 ```
 
 </v-click>
