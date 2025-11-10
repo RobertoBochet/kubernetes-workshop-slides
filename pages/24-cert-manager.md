@@ -304,7 +304,8 @@ It is enough to provide the `Secret` containing the certificate
 
 ---
 layout: two-cols
-level: 2
+transition: fade
+level: 3
 ---
 
 # [Ingresses over TLS](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
@@ -323,3 +324,15 @@ This behavior can be achieved by setting the `"cert-manager.io/cluster-issuer"` 
 <<<@/snippets/manifests/cert-manager/ingress-echo-server-tls.yaml yaml{17-20}
 <<<@/snippets/manifests/cert-manager/ingress-echo-server-tls-annotated.yaml yaml{5-6}
 ````
+
+---
+level: 2
+---
+
+# cert-manager resources workflow
+
+For debugging purposes, it is useful to understand the role of the `cert-manager` resources
+
+<v-space size="xxl"/>
+
+<<<@/snippets/diagrams/cert-manager-resources.mermaid
