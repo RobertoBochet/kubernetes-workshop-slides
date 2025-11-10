@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: echo-server
+  annotations:
+    meta.helm.sh/release-name: echo-server
+    meta.helm.sh/release-namespace: echo-server
+data:
+  ENABLE__COOKIES: "true"
+  ENABLE__ENVIRONMENT: "true"
+  ENABLE__FILE: "true"
+  ENABLE__HEADER: "true"
+  ENABLE__HOST: "true"
+  ENABLE__HTTP: "true"
+  ENABLE__REQUEST: "true"
+  LOGS__IGNORE__PING: "false"
+  PORT: "80"
