@@ -77,6 +77,10 @@ src: ./pages/23-annotations.md
 ---
 
 ---
+src: ./pages/24-cert-manager.md
+---
+
+---
 hideInToc: true
 ---
 
