@@ -1,0 +1,16 @@
+flowchart LR
+    U([User])
+    C[Certificate]
+    A[\Annotated Ingress\]
+    CR[CertificateRequest]
+    O[Order]
+    CH@{shape: procs, label: "Challenges"}
+    S[Secret]
+
+    U -.-> C
+    U -.-> A
+    A --> C
+    C --> CR
+    CR --> O
+    O --> CH
+    CR --> S
