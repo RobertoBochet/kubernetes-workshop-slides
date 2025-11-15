@@ -60,6 +60,10 @@ src: ./pages/14-namespaces.md
 ---
 
 ---
+src: ./pages/20-helm.md
+---
+
+---
 hideInToc: true
 ---
 
