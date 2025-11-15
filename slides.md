@@ -52,6 +52,10 @@ src: ./pages/12-deployments.md
 ---
 
 ---
+src: ./pages/13-configmaps-secrets.md
+---
+
+---
 hideInToc: true
 ---
 
