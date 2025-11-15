@@ -1,0 +1,223 @@
+# What is Kubernetes?
+
+<v-clicks>
+
+Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management.
+
+</v-clicks>
+
+---
+
+# How can I **safely** test Kubernetes?
+
+<v-click>
+
+## [Minikube](https://minikube.sigs.k8s.io/docs/)
+
+...creates a test cluster right on your computer using either **containers** or **VMs**
+
+</v-click>
+
+<v-click>
+
+```shell
+minikube start --nodes 3
+```
+
+This deploys a development Kubernetes cluster composed of 3 nodes
+
+</v-click>
+
+<v-space size="md" />
+
+<v-click>
+
+```shell
+kubectl get nodes
+```
+
+To check if the 3 nodes are correctly set up
+
+</v-click>
+
+<man command="kubectl" v-click>
+kubectl controls the Kubernetes cluster manager.
+</man>
+
+---
+
+## Let's use the glorified podman
+
+<v-space size="md" />
+
+<v-click>
+
+```shell
+kubectl run -it --image=alpine iwannabeubuntu sh
+```
+
+<man command="kubectl run">
+Create and run a particular image in a pod.
+</man>
+
+</v-click>
+
+<v-space size="md" />
+
+<v-click>
+
+```shell
+kubectl get pods
+```
+
+<man command="kubectl get">
+Display one or many resources.
+</man>
+
+</v-click>
+
+<v-click>
+  <p class="text-8 pt-10">That's it? Then why use Kubernetes?</p>
+</v-click>
+
+---
+layout: two-cols-header
+title: Useful definitions
+---
+
+<div class="text-center">
+
+# Imperative vs Declarative
+
+</div>
+
+<v-space size="sm" />
+
+::left::
+
+<p v-click="1">I specify a task to be executed</p>
+
+<i v-click="3">e.g., "Clean the room"</i>
+
+<p v-click="5">You have to perform the required task,
+and once completed,
+it's no longer your responsibility</p>
+
+<div v-click="7" class="grid grid-cols-2 gap-4 pt-10 px-20 text-center">
+    <div>
+        <img src="/icons/ansible.svg" alt="ansible logo" class="h-20 mx-auto" />
+        <p>Ansible</p>
+    </div>
+    <div>
+        <img src="/icons/podman.svg" alt="podman logo" class="h-20 mx-auto" />
+        <p class="text-center">Podman</p>
+    </div>
+</div>
+
+::right::
+
+<p v-click="2">I declare a desired state</p>
+
+<i v-click="4">e.g., "The room must be clean"</i>
+
+<p v-click="6">You have to maintain the desired state until a new state is declared</p>
+
+<div v-click="8" class="grid grid-cols-2 gap-4 pt-10 px-20 text-center">
+    <div>
+        <img src="/icons/opentofu.svg" alt="opentofu logo" class="h-20 mx-auto" />
+        <p>OpenTofu<br/><small>(Terraform)</small></p>
+    </div>
+    <div>
+        <img src="/icons/kubernetes.svg" alt="kubernetes logo" class="h-20 mx-auto" />
+        <p class="text-center">Kubernetes</p>
+    </div>
+</div>
+
+---
+
+# Kubernetes resources
+
+These are defined by `yaml` manifests
+
+```yaml {none|1|2|3-5|6|all}{lines: true}
+apiVersion: <api_version>
+kind: <kind_of_resource>
+metadata:
+  name: <resource_name>
+  # other metadata
+# resource specification
+```
+
+<<< @/snippets/manifests/pods/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
+
+---
+
+## Create a resource
+
+```shell
+kubectl apply -f resource.yaml
+```
+
+<man command="kubectl apply">
+Apply a configuration to a resource by file name or stdin.
+The resource name must be specified.<br/>
+This resource will be created if it doesn't exist yet.<br/><br/>
+JSON and YAML formats are accepted.
+</man>
+
+---
+layout: center
+class: text-center
+---
+
+## You require a resource...
+
+<v-space size="sm" />
+
+<<< @/snippets/diagrams/kubeapi.mermaid mermaid {scale: 0.95}
+
+---
+layout: center
+class: text-center
+---
+
+## ...a controller provisions it
+
+<v-space size="sm" />
+
+<<< @/snippets/diagrams/controller.mermaid mermaid {scale: 0.65}
+
+---
+title: Operator pattern
+routeAlias: operator-pattern
+---
+
+## [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+
+<v-space size="sm" />
+
+This is what makes Kubernetes really powerful
+
+<span v-click>You require a resource...</span> <span v-click><carbon-arrow-right class="mb-[-4px]" /> ...a controller provisions it</span>
+
+<p v-click class="text-5 pt-20">A little spoiler:</p>
+<p v-after class="font-italic">Relying on this mechanism, you can extend the Kubernetes functionality,<br/>creating custom resource schemas and controllers.</p>
+
+<p v-click>We'll come back to it later</p>
+
+---
+
+# So, why should I use Kubernetes?
+
+<v-space size="md" />
+
+<div class="text-7">
+<v-clicks>
+
+- It's the industry standard
+- Everyone's using it
+- Tell it what you want, not how to do it
+- You can extend it however you need <small>(through the operator pattern)</small>
+
+</v-clicks>
+</div>

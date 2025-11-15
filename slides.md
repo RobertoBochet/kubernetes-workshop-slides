@@ -36,6 +36,10 @@ hideInToc: true
 <div class="mt-[-50px]">All you need to start with Kubernetes</div>
 
 ---
+src: ./pages/00-overview.md
+---
+
+---
 hideInToc: true
 ---
 
