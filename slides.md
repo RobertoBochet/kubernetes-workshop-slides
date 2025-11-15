@@ -68,6 +68,10 @@ src: ./pages/21-ingresses.md
 ---
 
 ---
+src: ./pages/22-custom-resource-definitions.md
+---
+
+---
 hideInToc: true
 ---
 
