@@ -72,6 +72,10 @@ src: ./pages/22-custom-resource-definitions.md
 ---
 
 ---
+src: ./pages/23-annotations.md
+---
+
+---
 hideInToc: true
 ---
 
