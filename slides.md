@@ -64,6 +64,10 @@ src: ./pages/20-helm.md
 ---
 
 ---
+src: ./pages/21-ingresses.md
+---
+
+---
 hideInToc: true
 ---
 
