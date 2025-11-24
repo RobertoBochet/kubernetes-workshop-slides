@@ -1,5 +1,4 @@
 ---
-#layout: two-cols
 transition: fade
 title: cert-manager
 ---
@@ -24,11 +23,11 @@ helm install cert-manager oci://quay.io/jetstack/charts/cert-manager \
 
 <v-space/>
 
-<small v-click>
+<NoteBox v-click>
 
-N.B. `cert-manager` helm chart is distributed via OCI registry. In this case `helm repo add` is not required
+`cert-manager` helm chart is distributed via OCI registry. In this case `helm repo add` is not required
 
-</small>
+</NoteBox>
 
 <!--
 ```shell
@@ -109,7 +108,7 @@ Each `Certificate` is managed by a specific `Issuer`
 
 The certificate (and the associated private key) will be stored in a secret once it is generated
 
-<small>N.B. the operator will take care of renewing the certificate when it is about to expire</small>
+<NoteBox>The operator will take care of renewing the certificate when it is about to expire</NoteBox>
 
 </v-clicks>
 
@@ -213,11 +212,11 @@ The CA can verify the domain ownership by pulling the file and checking the cont
 
 </v-click>
 
-<small v-click>
+<NoteBox level="warning" v-click>
 
-N.B. the HTTP server must be exposed on the internet to allow the CA to complete the check 
+The HTTP server must be exposed on the internet to allow the CA to complete the check 
 
-</small>
+</NoteBox>
 
 ---
 layout: two-cols-header
@@ -244,11 +243,11 @@ The CA can verify the domain ownership by making a DNS query to a trusted DNS
 
 </v-click>
 
-<small v-click>
+<NoteBox v-click>
 
-N.B. this kind of challenge can be used also for wildcard domains and domains without record A/AAAA on the internet (e.g., inside a VPN)
+This kind of challenge can be used also for wildcard domains and domains without record A/AAAA on the internet (e.g., inside a VPN)
 
-</small>
+</NoteBox>
 
 ---
 transition: fade
@@ -272,11 +271,11 @@ level: 2
 
 <<<@/snippets/manifests/cert-manager/clusterissuer-letsencrypt-staging-dns01.yaml yaml[clusterissuer-letsencrypt-staging-dns01.yaml]{all|11-16|all}{lines:true}
 
-<small v-click="1">
+<NoteBox level="info" v-click="1">
 
-N.B. for this challenge, `cert-manager` has to support your DNS provider (e.g., Cloudflare)
+For this challenge, `cert-manager` has to support your DNS provider (e.g., Cloudflare)
 
-</small>
+</NoteBox>
 
 ---
 layout: two-cols

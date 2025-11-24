@@ -42,13 +42,14 @@ The resource structure is defined via [OpenAPI v3.0 schemas](https://kubernetes.
 
 </v-click>
 
-<div class="mt-25"/>
+<v-space size="xxl"/>
 
-<small v-click="5">
+<NoteBox level="warning" v-click="5">
 
-N.B. the `name` cannot be chosen arbitrarily; it must be set as `"{.spec.names.plural}.{.spec.group}"` and be a valid [DNS subdomain name](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-subdomain-names)
+The `name` cannot be chosen arbitrarily;
+it must be set as `"{.spec.names.plural}.{.spec.group}"` and be a valid [DNS subdomain name](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-subdomain-names)
 
-</small>
+</NoteBox>
 
 ::right::
 

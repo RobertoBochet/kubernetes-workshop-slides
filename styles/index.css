@@ -1,7 +1,26 @@
-.two-columns {
-  gap: 10px;
-}
+.slidev-layout {
+  &.two-columns,
+  &.two-cols-header {
+    gap: 10px;
+  }
 
-.two-cols-header {
-  gap: 10px;
+  :not(pre) > code {
+    padding-left: 0;
+    padding-right: 0;
+    font-variant: petite-caps;
+  }
+
+  dl {
+    dt {
+      margin-left: 0.5em;
+    }
+    dd {
+      font-size: 70%;
+      margin-left: 1.5em;
+    }
+  }
+
+  .slidev-vclick-target {
+    transition: all 300ms ease;
+  }
 }

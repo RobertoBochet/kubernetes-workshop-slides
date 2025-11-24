@@ -12,9 +12,15 @@ They allow the exposure of multiple HTTP services through the same endpoint, act
 
 `Ingresses` also rely on the <Link to="operator-pattern">operator pattern</Link>, but no default controller is provided out of the box
 
-<small>N.B. `Ingresses` are now in the EoL, superseded by [Gateway API](https://kubernetes.io/docs/concepts/services-networking/gateway/). However, they are still widely used</small>
-
 </v-clicks>
+
+<v-space size="xl"/>
+
+<NoteBox level="warning" v-click="8">
+
+`Ingresses` are now in the EoL, superseded by [Gateway API](https://kubernetes.io/docs/concepts/services-networking/gateway/). However, they are still widely used
+
+</NoteBox>
 
 ::right::
 
