@@ -4,6 +4,7 @@
     "": {
       "name": "kubernetes",
       "dependencies": {
+        "@iconify-json/devicon": "^1.2.50",
         "@iconify-json/logos": "^1.2.10",
         "@iconify-json/vscode-icons": "^1.2.33",
         "@iconify/vue": "^5.0.0",
@@ -152,6 +153,8 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
     "@iconify-json/carbon": ["@iconify-json/carbon@1.2.14", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-33u6uGiYJ79Dfp72peT+PBMcjxzi+NyJLpqYRX8pnw0zchsUW7Us2xecgvkWgD83KYcbe6hufyWlHFU9y7fb/Q=="],
+
+    "@iconify-json/devicon": ["@iconify-json/devicon@1.2.50", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-0K+NysBPW2VTXDa0C/PKtWGPACug+0balv+dmFHTXyN6SQYHljzhXhQgTVZ+Xe4M95qHznNsFb5nhrbE1Bxk4w=="],
 
     "@iconify-json/logos": ["@iconify-json/logos@1.2.10", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-qxaXKJ6fu8jzTMPQdHtNxlfx6tBQ0jXRbHZIYy5Ilh8Lx9US9FsAdzZWUR8MXV8PnWTKGDFO4ZZee9VwerCyMA=="],
 

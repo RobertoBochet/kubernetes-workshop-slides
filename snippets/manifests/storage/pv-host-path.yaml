@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data
+spec:
+  hostPath:
+    type: DirectoryOrCreate
+    path: /var/data
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 5Gi

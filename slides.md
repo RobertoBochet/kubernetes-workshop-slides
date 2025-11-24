@@ -80,6 +80,10 @@ src: ./pages/24-cert-manager.md
 ---
 
 ---
+src: ./pages/25-storage.md
+---
+
+---
 hideInToc: true
 ---
 
