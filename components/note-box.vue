@@ -35,6 +35,7 @@ const classLevel = computed(() => `note-box--${props.level.toLowerCase()}`)
   border-radius: 4px;
   border-style: solid;
   margin: 10px 0;
+  font-size: 0.8em;
 
   &--light {
     border-left-width: 4px;

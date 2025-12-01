@@ -67,6 +67,7 @@ For each result, you can find: the repository, the chart name, the version histo
 </v-clicks>
 
 ---
+layout: steps
 transition: fade
 hideInToc: true
 ---
@@ -74,7 +75,11 @@ hideInToc: true
 # [Helm](https://helm.sh/docs)
 The procedure to install a Helm chart is straightforward
 
+::steps::
+
 1. Fetch the helm chart repository
+
+::content::
 
 <v-click>
 
@@ -103,6 +108,7 @@ Gets the latest information about charts from the respective chart repositories
 </v-click>
 
 ---
+layout: steps
 transition: fade
 hideInToc: true
 ---
@@ -110,8 +116,12 @@ hideInToc: true
 # [Helm](https://helm.sh/docs)
 The procedure to install a Helm chart is straightforward
 
+::steps::
+
 1. Fetch the helm chart repository
 2. Define the custom `values.yaml`
+
+::content::
 
 <v-click>
 
@@ -126,15 +136,20 @@ Inspects a chart (directory, file, or URL) and displays the contents of the valu
 </v-click>
 
 ---
+layout: steps
 hideInToc: true
 ---
 
 # [Helm](https://helm.sh/docs)
 The procedure to install a Helm chart is straightforward
 
+::steps::
+
 1. Fetch the helm chart repository
 2. Define the custom `values.yaml`
 3. Install the chart
+
+::content::
 
 <v-click>
 
