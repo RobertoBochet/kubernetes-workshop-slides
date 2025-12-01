@@ -1,0 +1,10 @@
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: new-user
+spec:
+  signerName: kubernetes.io/kube-apiserver-client
+  usages:
+    - client auth
+  expirationSeconds: 15552000 # six months
+  request: # the user csr base64 encoded (e.g., cat new-user.csr | base64 | tr -d "\n")

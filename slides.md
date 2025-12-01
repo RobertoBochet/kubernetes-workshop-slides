@@ -84,6 +84,10 @@ src: ./pages/25-storage.md
 ---
 
 ---
+src: ./pages/26-api-access-control.md
+---
+
+---
 hideInToc: true
 ---
 
