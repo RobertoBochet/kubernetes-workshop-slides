@@ -88,6 +88,10 @@ src: ./pages/26-api-access-control.md
 ---
 
 ---
+src: ./pages/27-probes.md
+---
+
+---
 hideInToc: true
 ---
 
