@@ -62,7 +62,7 @@ level: 2
 
 A path on the host filesystem can be mounted directly in a pod
 
-<NoteBox level="Alert" v-click>
+<NoteBox type="Alert" v-click>
 
 The use of `hostPath` is discouraged in production. [Read more](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath)
 
@@ -184,7 +184,7 @@ A `PVC` binds to a specific `PV`, waiting for it to become available before use
 
 <v-space size="md"/>
 
-<NoteBox level="Alert" v-click="5">
+<NoteBox type="Alert" v-click="5">
 
 `storageClassName` is not required in this situation, but a cluster can set its own default if not provided. Setting it
 to `""` explicitly prevents using the cluster's default storage class.  
@@ -277,7 +277,7 @@ The manifest shown here is the `StorageClass` provided by the [Rancher local-pat
 
 </v-clicks>
 
-<NoteBox level="Info" v-click="6">
+<NoteBox type="Info" v-click="6">
 
 Also minikube by default provides a `StorageClass` called `standard`
 
@@ -289,7 +289,7 @@ Also minikube by default provides a `StorageClass` called `standard`
 
 <v-space size="md"/>
 
-<NoteBox level="Info" v-click="7">
+<NoteBox type="Info" v-click="7">
 
 A `StorageClass` can be set as the default one for a cluster by adding the `annotation` `storageclass.kubernetes.io/is-default-class: "true"`.  
 If a `PVC` is created without an explicit `storageClassName`, the default one will be assigned to it

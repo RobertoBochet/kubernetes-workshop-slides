@@ -2,16 +2,16 @@
 import { computed, PropType } from "vue"
 import LightOrDark from "@slidev/client/builtin/LightOrDark.vue"
 
-type Level = "Info" | "Warning" | "Alert"
+type NoteBoxType = "Info" | "Warning" | "Alert" | "Success" | "Failure"
 
 const props = defineProps({
-  level: {
-    type: String as PropType<Level>,
+  type: {
+    type: String as PropType<NoteBoxType>,
     default: "Info"
   }
 })
 
-const classLevel = computed(() => `note-box--${props.level.toLowerCase()}`)
+const classLevel = computed(() => `note-box--${props.type.toLowerCase()}`)
 </script>
 
 <template>
@@ -48,9 +48,14 @@ const classLevel = computed(() => `note-box--${props.level.toLowerCase()}`)
     border-color: theme("colors.orange.600");
     background-color: theme("colors.orange.200");
   }
-  &--light&--alert {
+  &--light&--alert,
+  &--light&--failure {
     border-color: theme("colors.red.600");
     background-color: theme("colors.red.200");
+  }
+  &--light&--success {
+    border-color: theme("colors.green.600");
+    background-color: theme("colors.green.200");
   }
 
   &--dark {
@@ -64,8 +69,12 @@ const classLevel = computed(() => `note-box--${props.level.toLowerCase()}`)
   &--dark&--warning {
     border-color: theme("colors.orange.600");
   }
-  &--dark&--alert {
+  &--dark&--alert,
+  &--dark&--failure {
     border-color: theme("colors.red.600");
+  }
+  &--dark&--success {
+    border-color: theme("colors.green.600");
   }
 
   * {

@@ -16,7 +16,7 @@ They allow the exposure of multiple HTTP services through the same endpoint, act
 
 <v-space size="xl"/>
 
-<NoteBox level="warning" v-click="8">
+<NoteBox type="warning" v-click="8">
 
 `Ingresses` are now in the EoL, superseded by [Gateway API](https://kubernetes.io/docs/concepts/services-networking/gateway/). However, they are still widely used
 

@@ -175,7 +175,7 @@ Instead, user identity is verified through an `X.509` certificate signed by the 
 
 </v-clicks>
 
-<NoteBox level="Alert" v-click>
+<NoteBox type="Alert" v-click>
 
 A certificate signed by the Kubernetes CA cannot be revoked.  
 Once issued, the certificate holder can authenticate to the cluster until this expires  
@@ -344,7 +344,7 @@ This can be achieved by assigning `Roles` (or `ClusterRoles`) with `RoleBindings
 
 </v-clicks>
 
-<NoteBox level="Alert" v-click="3">
+<NoteBox type="Alert" v-click="3">
 
 Certificate signed by the Kubernetes CA <u>cannot</u> be revoked.  
 The only method to limit a user owning a valid certificate is to delete its `RoleBindings` (or `ClusterRoleBindings`)
@@ -404,7 +404,7 @@ It can be changed by setting the `KUBECONFIG` env variable
 
 </NoteBox>
 
-<NoteBox level="Alert" v-click="6">
+<NoteBox type="Alert" v-click="6">
 
 On each cluster's node, during the bootstrap phase, a `kubeconfig` for the administration role is created.
 It must never leave the nodes and should only be used for creating the first personal user.  

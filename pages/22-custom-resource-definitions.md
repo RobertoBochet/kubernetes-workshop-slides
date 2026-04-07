@@ -44,7 +44,7 @@ The resource structure is defined via [OpenAPI v3.0 schemas](https://kubernetes.
 
 <v-space size="xxl"/>
 
-<NoteBox level="warning" v-click="5">
+<NoteBox type="warning" v-click="5">
 
 The `name` cannot be chosen arbitrarily;
 it must be set as `"{.spec.names.plural}.{.spec.group}"` and be a valid [DNS subdomain name](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-subdomain-names)

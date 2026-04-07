@@ -212,7 +212,7 @@ The CA can verify the domain ownership by pulling the file and checking the cont
 
 </v-click>
 
-<NoteBox level="warning" v-click>
+<NoteBox type="warning" v-click>
 
 The HTTP server must be exposed on the internet to allow the CA to complete the check 
 
@@ -271,7 +271,7 @@ level: 2
 
 <<<@/snippets/manifests/cert-manager/clusterissuer-letsencrypt-staging-dns01.yaml yaml[clusterissuer-letsencrypt-staging-dns01.yaml]{all|11-16|all}{lines:true}
 
-<NoteBox level="info" v-click="1">
+<NoteBox type="info" v-click="1">
 
 For this challenge, `cert-manager` has to support your DNS provider (e.g., Cloudflare)
 
