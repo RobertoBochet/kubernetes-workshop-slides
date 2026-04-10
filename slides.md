@@ -92,6 +92,10 @@ src: ./pages/27-probes.md
 ---
 
 ---
+src: ./pages/28-statefulsets.md
+---
+
+---
 hideInToc: true
 ---
 
