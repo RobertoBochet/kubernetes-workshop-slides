@@ -149,7 +149,6 @@ kubectl get endpoints echo-server -w
 layout: two-cols-grid
 title: Probing methods
 level: 2
-transition: fade
 ---
 
 # [Probing methods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#Probe)
