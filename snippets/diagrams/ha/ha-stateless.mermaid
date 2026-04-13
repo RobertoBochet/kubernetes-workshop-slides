@@ -1,0 +1,10 @@
+graph LR
+    service(["`Service`"])
+
+    subgraph deployment["`Deployment`"]
+        pod1(Pod1)
+        pod2(Pod2)
+        pod3(Pod3)
+    end
+
+    service --> pod1 & pod2 & pod3

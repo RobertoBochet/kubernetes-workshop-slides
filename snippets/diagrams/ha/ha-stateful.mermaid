@@ -1,0 +1,20 @@
+graph LR
+    service(["`Service`"])
+
+    subgraph statefulset["`StatefulSet`"]
+        pod1(Pod1)
+        pod2(Pod2)
+        pod3(Pod3)
+    end
+
+    subgraph pcvs["`PVC`"]
+        pvc1[(PVC1)]
+        pvc2[(PVC1)]
+        pvc3[(PVC1)]
+    end
+
+    service --> pod1 & pod2 & pod3
+
+    pod1 --> pvc1
+    pod2 --> pvc2
+    pod3 --> pvc3

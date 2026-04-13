@@ -96,6 +96,10 @@ src: ./pages/28-statefulsets.md
 ---
 
 ---
+src: ./pages/29-ha.md
+---
+
+---
 hideInToc: true
 ---
 

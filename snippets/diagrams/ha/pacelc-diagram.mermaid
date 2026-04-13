@@ -1,0 +1,49 @@
+flowchart TD
+    Status{Partitioned?}
+
+    subgraph E_Side [ ]
+        style E_Side fill: none, stroke: none
+        EChoice{Latency or<br/>Consistency}
+
+        subgraph ColEL [ ]
+            style ColEL fill: none,stroke: none
+            EL[EL]
+            PCEL[PC/EL]
+        end
+        subgraph ColEC [ ]
+            style ColEC fill: none, stroke: none
+            EC[EC]
+            PCEC[PC/EC]
+        end
+    end
+
+    subgraph SideP [ ]
+        style SideP fill: none, stroke: none
+        PChoice{Availability or<br/>Consistency}
+
+        subgraph ColPA [ ]
+            style ColPA fill: none,stroke: none
+            PA[PA]
+            PAEL[PA/EL]
+        end
+        subgraph ColPC [ ]
+            style ColPC fill: none, stroke: none
+            PC[PC]
+            PAEC[PA/EC]
+        end
+    end
+
+    Status -- "(P) Yes" --> PChoice
+    Status -- "(E) No" --> EChoice
+
+    PChoice -- "(A) Availability" --> PA
+    PChoice -- "(C) Consistency" --> PC
+
+    EChoice -- "(L) Latency" --> EL
+    EChoice -- "(C) Consistency" --> EC
+
+    PA --> PAEL & PAEC
+    PC --> PCEL & PCEC
+
+    EL --> PAEL & PCEL
+    EC --> PAEC & PCEC
