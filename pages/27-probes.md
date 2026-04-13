@@ -6,7 +6,7 @@ title: Probes
 
 # [Probes](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/)
 
-They are the tools Kubernetes uses to understand the real status of the running service inside a pod
+They are the tools Kubernetes uses to understand the real status of the running service inside a `Pod`
 
 ::right::
 
@@ -37,7 +37,7 @@ The probe is stopped
 <NoteBox type="Alert" v-click="4">
 
 `on failure`  
-The pod is restarted
+The `Pod` is restarted
 
 </NoteBox>
 
@@ -80,7 +80,7 @@ Nothing happens
 <NoteBox type="Alert" v-click="4">
 
 `on failure`  
-The pod is restarted
+The `Pod` is restarted
 
 </NoteBox>
 
@@ -107,15 +107,15 @@ transition: fade
 
 # [Readiness probe](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/#readiness-probe)
 
-It determines when a pod is ready to accept traffic
+It determines when a `Pod` is ready to accept traffic
 
 <v-space size="xl" />
 
 <NoteBox type="Success" v-click="3">
 
 `on success`  
-The pod is flagged as `ready`:  
-Kubernetes allows service traffic to go to this pod
+The `Pod` is flagged as _Ready_:  
+Kubernetes allows service traffic to go to this `Pod`
 
 </NoteBox>
 
@@ -124,8 +124,8 @@ Kubernetes allows service traffic to go to this pod
 <NoteBox type="Alert" v-click="4">
 
 `on failure`  
-The pod is flagged as `not ready`:  
-Kubernetes stops sending service traffic to this pod
+The `Pod` is flagged as **not** _Ready_:  
+Kubernetes stops sending service traffic to this `Pod`
 
 </NoteBox>
 
