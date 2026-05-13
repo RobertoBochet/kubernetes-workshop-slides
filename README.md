@@ -16,7 +16,7 @@ This workshop is structured to guide participants through the Kubernetes ecosyst
 - **Networking**: Ingresses.
 - **Metadata & Extensions**: Annotations, CRDs, and Helm.
 - **Security**: API Access Control, Cert-Manager, and Pod Hardening.
-- **Reliability**: Startup, liveness, and readiness probes.
+- **Reliability**: Pod Resources, startup, liveness, and readiness probes.
 - **High Availability**: Theoretical foundations and architectural examples.
 
 ## Development

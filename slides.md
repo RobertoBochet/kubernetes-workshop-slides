@@ -88,19 +88,23 @@ src: ./pages/26-api-access-control.md
 ---
 
 ---
-src: ./pages/27-probes.md
+src: ./pages/27-pod-resources.md
 ---
 
 ---
-src: ./pages/28-statefulsets.md
+src: ./pages/28-probes.md
 ---
 
 ---
-src: ./pages/29-ha.md
+src: ./pages/29-statefulsets.md
 ---
 
 ---
-src: ./pages/30-pod-hardening.md
+src: ./pages/30-ha.md
+---
+
+---
+src: ./pages/31-pod-hardening.md
 ---
 
 ---
