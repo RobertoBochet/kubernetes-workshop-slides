@@ -1,13 +1,68 @@
+:root {
+  --slidev-theme-primary: #326ce5;
+  --slidev-theme-background-color: light-dark(#ffffff, #191919);
+  --slidev-theme-background-secondary-color: light-dark(#e6e6e6, #202020);
+  --slidev-theme-text-color: light-dark(#000000, #ffffff);
+}
+
+#slide-content {
+  background-color: var(--slidev-theme-background-color);
+  color: var(--slidev-theme-text-color);
+}
+
 .slidev-layout {
-  &.two-columns,
-  &.two-cols-header {
-    gap: 10px;
+  --slidev-heading-color: var(--slidev-theme-text-color);
+  --slidev-link-color: var(--slidev-theme-text-color);
+  --slidev-link-color-hover: var(--slidev-theme-primary);
+  --slidev-bold-color: var(--slidev-theme-text-color);
+
+  --slidev-code-background: var(--slidev-theme-background-secondary-color);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--slidev-heading-color);
   }
 
-  :not(pre) > code {
-    padding-left: 0;
-    padding-right: 0;
-    font-variant: petite-caps;
+  strong,
+  b {
+    font-weight: bold;
+    color: var(--slidev-bold-color);
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: var(--slidev-link-color);
+
+    &:hover {
+      color: var(--slidev-link-color-hover);
+    }
+
+    &:has(img) {
+      @apply border-b-0;
+    }
+
+    img {
+      transition: all 0.15s linear;
+
+      &:hover {
+        @apply bg-white/20;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+      }
+      .shadow {
+        box-shadow: 5px 5px 8px #000;
+      }
+    }
+
+    code {
+      @apply p-0;
+    }
   }
 
   dl {
@@ -18,6 +73,17 @@
       font-size: 70%;
       margin-left: 1.5em;
     }
+  }
+
+  :not(pre) > code {
+    padding-left: 0;
+    padding-right: 0;
+    font-variant: petite-caps;
+  }
+
+  &.two-columns,
+  &.two-cols-header {
+    gap: 10px;
   }
 
   .slidev-vclick-target {

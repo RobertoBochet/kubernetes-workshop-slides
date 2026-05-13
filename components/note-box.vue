@@ -1,32 +1,24 @@
 <script setup lang="ts">
 import { computed, PropType } from "vue"
-import LightOrDark from "@slidev/client/builtin/LightOrDark.vue"
 
-type NoteBoxType = "Info" | "Warning" | "Alert" | "Success" | "Failure"
+type NoteBoxType = "Info" | "Warning" | "Alert" | "Success" | "Failure" | "Neutral"
 
-const props = defineProps({
+const { type, class: _class } = defineProps({
+  class: { type: String, default: "" },
   type: {
     type: String as PropType<NoteBoxType>,
+    required: false,
     default: "Info"
   }
 })
 
-const classLevel = computed(() => `note-box--${props.type.toLowerCase()}`)
+const classType = computed(() => `note-box--${type?.toLowerCase() ?? "neutral"}`)
 </script>
 
 <template>
-  <LightOrDark>
-    <template #dark>
-      <div :class="`note-box note-box--dark ${classLevel}`">
-        <slot></slot>
-      </div>
-    </template>
-    <template #light>
-      <div :class="`note-box note-box--light ${classLevel}`">
-        <slot></slot>
-      </div>
-    </template>
-  </LightOrDark>
+  <div :class="['note-box', classType, _class]">
+    <slot></slot>
+  </div>
 </template>
 
 <style scoped>
@@ -37,44 +29,28 @@ const classLevel = computed(() => `note-box--${props.type.toLowerCase()}`)
   margin: 10px 0;
   font-size: 0.8em;
 
-  &--light {
-    border-left-width: 4px;
-  }
-  &--light&--info {
-    border-color: theme("colors.blue.600");
-    background-color: theme("colors.blue.200");
-  }
-  &--light&--warning {
-    border-color: theme("colors.orange.600");
-    background-color: theme("colors.orange.200");
-  }
-  &--light&--alert,
-  &--light&--failure {
-    border-color: theme("colors.red.600");
-    background-color: theme("colors.red.200");
-  }
-  &--light&--success {
-    border-color: theme("colors.green.600");
-    background-color: theme("colors.green.200");
-  }
+  @apply border-l-4 dark:border-1 dark:border-l-4;
 
-  &--dark {
-    background-color: var(--slidev-code-background);
-    border-width: 1px;
-    border-left-width: 4px;
+  &--neutral {
+    border-color: theme("colors.gray.600");
+    background-color: light-dark(theme("colors.gray.200"), var(--slidev-code-background));
   }
-  &--dark&--info {
+  &--info {
     border-color: theme("colors.blue.600");
+    background-color: light-dark(theme("colors.blue.200"), var(--slidev-code-background));
   }
-  &--dark&--warning {
+  &--warning {
     border-color: theme("colors.orange.600");
+    background-color: light-dark(theme("colors.orange.200"), var(--slidev-code-background));
   }
-  &--dark&--alert,
-  &--dark&--failure {
+  &--alert,
+  &--failure {
     border-color: theme("colors.red.600");
+    background-color: light-dark(theme("colors.red.200"), var(--slidev-code-background));
   }
-  &--dark&--success {
+  &--success {
     border-color: theme("colors.green.600");
+    background-color: light-dark(theme("colors.green.200"), var(--slidev-code-background));
   }
 
   * {
