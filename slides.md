@@ -113,7 +113,7 @@ hideInToc: true
 
 # Table of contents
 
-<Toc maxDepth="1" columns="2"/>
+<Toc maxDepth="2" columns="4" listClass="text-xs"/>
 
 ---
 layout: outro

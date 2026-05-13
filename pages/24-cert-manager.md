@@ -38,6 +38,7 @@ kubectl get crds
 ---
 transition: fade
 level: 2
+hideInToc: true
 ---
 
 # [X.509 Certificate](https://en.wikipedia.org/wiki/X.509)
@@ -64,10 +65,11 @@ The verifier of the certificate needs to trust only the [Root CA](https://en.wik
 ---
 layout: two-cols
 transition: fade
+title: Issuers
 level: 2
 ---
 
-# [cert-manager Issuers](https://cert-manager.io/docs/concepts/issuer/) 
+# [cert-manager `Issuers`](https://cert-manager.io/docs/concepts/issuer/) 
 
 They represent certificate authorities (CAs) that are able to release X.509 certificates
 
@@ -90,10 +92,11 @@ They represent certificate authorities (CAs) that are able to release X.509 cert
 ---
 layout: two-cols
 transition: fade
+title: Certificates
 level: 2
 ---
 
-# [cert-manager Certificates](https://cert-manager.io/docs/usage/certificate/)
+# [cert-manager `Certificates`](https://cert-manager.io/docs/usage/certificate/)
 
 They represent a human-readable definition of a certificate request
 
@@ -167,7 +170,7 @@ is a protocol for automating interactions between [Certificate Authorities](http
 ---
 layout: two-cols-header
 transition: fade
-level: 2
+level: 3
 ---
 
 # [ACME Challenges](https://acmeprotocol.dev/acme/challenges/)
@@ -187,7 +190,7 @@ So, the `cert-manager` operator needs to prove to the CA that it has control ove
 ---
 layout: two-cols-header
 transition: fade
-level: 2
+level: 3
 ---
 
 # [ACME HTTP-01 Challenge](https://acmeprotocol.dev/acme/challenges/#http-01)
@@ -221,7 +224,7 @@ The HTTP server must be exposed on the internet to allow the CA to complete the 
 ---
 layout: two-cols-header
 transition: fade
-level: 2
+level: 3
 ---
 
 # [ACME DNS-01 Challenge](https://acmeprotocol.dev/acme/challenges/#dns-01)
@@ -251,6 +254,7 @@ This kind of challenge can be used also for wildcard domains and domains without
 
 ---
 transition: fade
+title: Issuers HTTP-01
 level: 2
 ---
 
@@ -262,6 +266,7 @@ level: 2
 
 ---
 transition: fade
+title: Issuers DNS-01
 level: 2
 ---
 
@@ -280,10 +285,11 @@ For this challenge, `cert-manager` has to support your DNS provider (e.g., Cloud
 ---
 layout: two-cols
 transition: fade
+title: Ingresses over TLS
 level: 2
 ---
 
-# [Ingresses over TLS](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
+# [`Ingresses` over TLS](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
 
 `Ingresses` can also expose a service over HTTPS
 
@@ -325,10 +331,11 @@ This behavior can be achieved by setting the `"cert-manager.io/cluster-issuer"` 
 ````
 
 ---
+title: Resources Workflow
 level: 2
 ---
 
-# cert-manager resources workflow
+# cert-manager Resources Workflow
 
 For debugging purposes, it is useful to understand the role of the `cert-manager` resources
 

@@ -7,6 +7,9 @@ Kubernetes is an open-source container orchestration system for automating softw
 </v-clicks>
 
 ---
+level: 2
+hideInToc: true
+---
 
 # How can I **safely** test Kubernetes?
 
@@ -45,6 +48,9 @@ kubectl controls the Kubernetes cluster manager.
 </man>
 
 ---
+level: 2
+hideInToc: true
+---
 
 ## Let's use the glorified podman
 
@@ -82,7 +88,8 @@ Display one or many resources.
 
 ---
 layout: two-cols-header
-title: Useful definitions
+level: 2
+hideInToc: true
 ---
 
 <div class="text-center">
@@ -134,6 +141,8 @@ it's no longer your responsibility</p>
 </div>
 
 ---
+level: 2
+---
 
 # Kubernetes resources
 
@@ -150,6 +159,8 @@ metadata:
 
 <<< @/snippets/manifests/pods/pod-echo-server.yaml yaml[resource.yaml]{hide|all}{lines:true}
 
+---
+hideInToc: true
 ---
 
 ## Create a resource
@@ -168,6 +179,7 @@ JSON and YAML formats are accepted.
 ---
 layout: center
 class: text-center
+hideInToc: true
 ---
 
 ## You require a resource...
@@ -179,6 +191,7 @@ class: text-center
 ---
 layout: center
 class: text-center
+hideInToc: true
 ---
 
 ## ...a controller provisions it
@@ -190,6 +203,7 @@ class: text-center
 ---
 title: Operator pattern
 routeAlias: operator-pattern
+level: 2
 ---
 
 ## [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
@@ -205,6 +219,8 @@ This is what makes Kubernetes really powerful
 
 <p v-click>We'll come back to it later</p>
 
+---
+hideInToc: true
 ---
 
 # So, why should I use Kubernetes?
