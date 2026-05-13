@@ -11,18 +11,18 @@
     "lint:fix": "prettier . --write"
   },
   "dependencies": {
-    "@iconify-json/devicon": "^1.2.50",
-    "@iconify-json/logos": "^1.2.10",
-    "@iconify-json/vscode-icons": "^1.2.33",
-    "@iconify/vue": "^5.0.0",
-    "@slidev/cli": "^52.6.0",
+    "@iconify-json/devicon": "^1.2.62",
+    "@iconify-json/logos": "^1.2.11",
+    "@iconify-json/vscode-icons": "^1.2.49",
+    "@iconify/vue": "^5.0.1",
+    "@slidev/cli": "~52.14.2",
     "@slidev/theme-default": "latest",
-    "vue": "^3.5.22"
+    "vue": "^3.5.34"
   },
   "devDependencies": {
-    "lint-staged": "^16.2.6",
-    "playwright-chromium": "^1.56.1",
-    "prettier": "^3.6.2",
+    "lint-staged": "^17.0.4",
+    "playwright-chromium": "^1.60.0",
+    "prettier": "^3.8.3",
     "prettier-plugin-slidev": "^1.0.5",
     "simple-git-hooks": "^2.13.1"
   },
