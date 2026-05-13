@@ -15,7 +15,7 @@ This workshop is structured to guide participants through the Kubernetes ecosyst
 - **Configuration & Storage**: ConfigMaps, Secrets, and Persistent Volumes.
 - **Networking**: Ingresses.
 - **Metadata & Extensions**: Annotations, CRDs, and Helm.
-- **Security**: API Access Control and Cert-Manager.
+- **Security**: API Access Control, Cert-Manager, and Pod Hardening.
 - **Reliability**: Startup, liveness, and readiness probes.
 - **High Availability**: Theoretical foundations and architectural examples.
 
