@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: ["sleep", "infinity"]
+      securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    runAsGroup: 2000
+    fsGroup: 3000
+    fsGroupChangePolicy: OnRootMismatch
+    supplementalGroups: [4000, 5000]
+    supplementalGroupsPolicy: Strict

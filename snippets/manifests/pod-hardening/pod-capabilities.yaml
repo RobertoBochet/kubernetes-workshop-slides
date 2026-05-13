@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: ["sleep", "infinity"]
+      securityContext:
+        capabilities:
+          drop: ["ALL"]
+          add:
+            - NET_BIND_SERVICE
+  securityContext: {}

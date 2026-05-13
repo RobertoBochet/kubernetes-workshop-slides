@@ -100,6 +100,10 @@ src: ./pages/29-ha.md
 ---
 
 ---
+src: ./pages/30-pod-hardening.md
+---
+
+---
 hideInToc: true
 ---
 
