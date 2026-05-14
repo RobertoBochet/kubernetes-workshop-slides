@@ -2,6 +2,7 @@
 layout: two-cols
 title: Annotations
 routeAlias: annotations
+transition: slide-left
 ---
 
 # [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)

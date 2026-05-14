@@ -1,6 +1,5 @@
 ---
 layout: two-cols
-transition: fade
 title: Helm
 ---
 
@@ -24,7 +23,6 @@ To customize the installation of the service, a helm chart exposes a list of ove
 
 ---
 layout: two-cols-header
-transition: fade
 hideInToc: true
 ---
 
@@ -48,7 +46,6 @@ With the release name "example" these produce
 <<<@/snippets/manifests/helm/rendered.yaml yaml{hide|all}{lines:true,at:3}
 
 ---
-transition: fade
 hideInToc: true
 ---
 
@@ -68,7 +65,6 @@ For each result, you can find: the repository, the chart name, the version histo
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -109,7 +105,6 @@ Gets the latest information about charts from the respective chart repositories
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -138,6 +133,7 @@ Inspects a chart (directory, file, or URL) and displays the contents of the valu
 ---
 layout: steps
 hideInToc: true
+transition: slide-left
 ---
 
 # [Helm](https://helm.sh/docs)

@@ -1,6 +1,5 @@
 ---
 layout: two-cols
-transition: fade
 title: Deployments
 ---
 
@@ -42,6 +41,7 @@ curl http://<node-ip>:30808 # curl still works
 
 ---
 hideInToc: true
+transition: slide-left
 ---
 
 # [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)

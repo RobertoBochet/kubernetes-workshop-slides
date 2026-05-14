@@ -9,7 +9,8 @@ license: CC-BY-SA-4.0
 
 theme: default
 
-transition: slide-left
+defaults:
+  transition: fade
 
 drawings:
   presenterOnly: true
@@ -30,6 +31,7 @@ colorSchema: auto
 ###############################
 layout: intro
 image: ./kubernetes-bg.svg
+transition: slide-left
 hideInToc: true
 ---
 

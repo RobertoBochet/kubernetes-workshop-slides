@@ -1,5 +1,4 @@
 ---
-transition: fade
 layout: two-cols
 title: Probes
 ---
@@ -16,7 +15,6 @@ They are the tools Kubernetes uses to understand the real status of the running 
 layout: two-cols
 title: Startup probe
 level: 2
-transition: fade
 ---
 
 # [Startup probe](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/#startup-probe)
@@ -59,7 +57,6 @@ kubectl get pods echo-server -w
 layout: two-cols
 title: Liveness probe
 level: 2
-transition: fade
 ---
 
 # [Liveness probe](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/#liveness-probe)
@@ -102,7 +99,6 @@ kubectl get pods echo-server -w
 layout: two-cols
 title: Readiness probe
 level: 2
-transition: fade
 ---
 
 # [Readiness probe](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/#readiness-probe)
@@ -149,6 +145,7 @@ kubectl get endpoints echo-server -w
 layout: two-cols-grid
 title: Probing methods
 level: 2
+transition: slide-left
 ---
 
 # [Probing methods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#Probe)

@@ -1,6 +1,5 @@
 ---
 layout: two-cols
-transition: fade
 title: Ingresses
 ---
 
@@ -40,7 +39,6 @@ They allow the exposure of multiple HTTP services through the same endpoint, act
 
 ---
 layout: two-cols-header
-transition: fade
 title: Ingress Controllers
 level: 2
 routeAlias: ingress-controllers
@@ -83,7 +81,6 @@ helm install -n ingress-nginx --create-namespace \
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -113,6 +110,7 @@ curl -H "Host: echo.example.org" http://{node_ip}:30080
 ---
 layout: two-cols
 hideInToc: true
+transition: slide-left
 ---
 
 # [IngressClasses](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)

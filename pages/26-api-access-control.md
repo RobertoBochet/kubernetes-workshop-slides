@@ -1,5 +1,4 @@
 ---
-transition: fade
 title: API access control
 ---
 
@@ -9,7 +8,6 @@ As previously seen, the KubeAPI is the single-point access to manage the cluster
 
 ---
 layout: two-cols
-transition: fade
 title: Service Accounts
 level: 2
 ---
@@ -53,7 +51,6 @@ kubectl exec pods/<pod_name> -- cat /var/run/secrets/kubernetes.io/serviceaccoun
 -->
 
 ---
-transition: fade
 level: 3
 hideInToc: true
 ---
@@ -77,7 +74,6 @@ Check if an account has permission to perform an operation
 </v-click>
 
 ---
-transition: fade
 title: RBAC
 level: 2
 ---
@@ -88,7 +84,6 @@ Role-based access control is the main method of regulating access to the KubeAPI
 
 ---
 layout: two-cols
-transition: fade
 title: Role and ClusterRoles
 level: 3
 ---
@@ -133,7 +128,6 @@ while a `ClusterRole` can set permissions cluster-wide
 
 ---
 layout: two-cols-header
-transition: fade
 title: RoleBindings and ClusterRoleBindings
 level: 3
 ---
@@ -159,7 +153,6 @@ Instead, `ClusterRoleBinding` applies a `ClusterRole` across the entire cluster
 <<<@/snippets/manifests/api-access-control/role-binding.yaml yaml[role-binding.yaml]{all|5-8|9-11|all}{lines:true}
 
 ---
-transition: fade
 title: Users
 level: 2
 ---
@@ -184,7 +177,6 @@ Once issued, the certificate holder can authenticate to the cluster until this e
 
 ---
 layout: steps
-transition: fade
 title: Issue a Certificate for a User
 level: 3
 ---
@@ -203,7 +195,6 @@ openssl genrsa -out new-user.key 3072
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -238,7 +229,6 @@ and sends it to a cluster `🛡️administrator`️
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -256,7 +246,6 @@ hideInToc: true
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -285,7 +274,6 @@ It allows a cluster admin to approve a certificate signing request (CSR).
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -318,7 +306,6 @@ kubectl get configmaps kube-root-ca.crt -o jsonpath="{.data['ca\.crt']}" > ca.cr
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -361,7 +348,6 @@ The only method to limit a user owning a valid certificate is to delete its `Rol
 
 ---
 layout: steps
-transition: fade
 hideInToc: true
 ---
 
@@ -389,6 +375,7 @@ The user can now authenticate with the KubeAPI using this configuration
 layout: two-cols
 title: kubeconfig
 level: 2
+transition: slide-left
 ---
 
 # [kubeconfig](https://kubernetes.io/docs/reference/config-api/kubeconfig.v1/)

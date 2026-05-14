@@ -1,5 +1,4 @@
 ---
-transition: fade
 title: Pod Hardening
 ---
 
@@ -18,7 +17,6 @@ Acts as a defense-in-depth layer to mitigate the impact of a breach, ensuring a 
 ---
 title: Security Context
 layout: two-cols
-transition: fade
 hideInToc: true
 level: 3
 ---
@@ -42,7 +40,6 @@ Container level directives take precedence over `Pod` level ones
 
 ---
 layout: two-cols
-transition: fade
 title: Rootless Pods
 level: 2
 ---
@@ -68,7 +65,6 @@ When set to `true`, ensures the container process runs with a non-zero UID, fail
 ---
 title: Run as User and Group
 layout: two-cols
-transition: fade
 level: 3
 ---
 
@@ -101,7 +97,6 @@ Allows overriding the `GID` of the process run in the container
 ---
 title: Filesystem Group
 layout: two-cols
-transition: fade
 level: 3
 ---
 
@@ -136,7 +131,6 @@ Defines whether the recursive group ownership change is performed `Always` or `O
 ---
 title: Supplemental Groups
 layout: two-cols
-transition: fade
 level: 3
 ---
 
@@ -170,7 +164,6 @@ kubectl run busybox -i --rm --image=busybox --restart=Never --overrides='{"spec"
 ---
 level: 2
 layout: two-cols
-transition: fade
 ---
 
 ## Readonly Filesystem
@@ -203,7 +196,6 @@ These locations must be made writable by mounting ephemeral volumes
 ---
 title: Linux Capabilities
 level: 2
-transition: fade
 ---
 
 ## [Linux Capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
@@ -234,7 +226,6 @@ Processes can transition a capability from the `permitted set` into the `effecti
 </v-clicks>
 
 ---
-transition: fade
 hideInToc: true
 ---
 
@@ -252,7 +243,6 @@ When a process runs a new binary (`execve`), the capability sets are recomputed:
 </v-clicks>
 
 ---
-transition: fade
 hideInToc: true
 ---
 
@@ -289,7 +279,6 @@ Processes can be executed with the [`NO_NEW_PRIVS`](https://www.kernel.org/doc/h
 ---
 level: 2
 layout: two-cols
-transition: fade
 ---
 
 ## Capabilities
@@ -325,7 +314,6 @@ An enhancing proposal ([`KEP-2763`](https://github.com/kubernetes/enhancements/t
 title: Allow Privilege Escalation
 level: 3
 layout: two-cols
-transition: fade
 ---
 
 ## Capabilities
@@ -345,7 +333,6 @@ When set to `false`, the container process runs with the `NO_NEW_PRIVS` flag, wh
 ---
 level: 2
 layout: two-cols
-transition: fade
 ---
 
 ## Privileged Containers
@@ -372,7 +359,6 @@ Enabling privileged mode disables all container isolation mechanisms and should 
 title: Seccomp
 level: 2
 layout: two-cols
-transition: fade
 ---
 
 ## [Seccomp](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-seccomp-profile-for-a-container)
@@ -395,7 +381,6 @@ Setting `.type` to `Localhost` allows using specific profiles available on the n
 title: AppArmor and SELinux
 level: 2
 layout: two-cols
-transition: fade
 ---
 
 ## [AppArmor](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-apparmor-profile-for-a-container) and [SELinux](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#assign-selinux-labels-to-a-container)
@@ -422,7 +407,6 @@ Allows assigning specific SELinux labels to a `Pod` or container, including sett
 layout: two-cols
 title: ServiceAccount Token Automount
 level: 2
-transition: fade
 ---
 
 ## `ServiceAccount` Token Automount
@@ -449,7 +433,6 @@ When set to `false`, prevents Kubernetes from mounting the `ServiceAccount` toke
 layout: two-cols
 title: Digest Pinning
 level: 2
-transition: fade
 ---
 
 ## Digest Pinning
@@ -480,6 +463,7 @@ Automating image updates is strongly recommended, especially when digest pinning
 layout: two-cols
 title: Pod Security Admission
 level: 2
+transition: slide-left
 ---
 
 ## [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/)

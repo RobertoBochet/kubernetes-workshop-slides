@@ -1,7 +1,6 @@
 ---
 layout: two-cols
 title: Pod Resources
-transition: fade
 ---
 
 # [`Pod` Resources](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
@@ -42,7 +41,6 @@ kubectl describe nodes
 ---
 title: Pod Resource Requests
 layout: two-cols
-transition: fade
 level: 2
 ---
 
@@ -77,7 +75,6 @@ Defines the minimum memory amount reserved for the container
 ---
 title: Pod Resource Limits
 layout: two-cols
-transition: fade
 level: 2
 ---
 
@@ -122,6 +119,7 @@ ls -l /sys/fs/cgroup/kubepods/
 title: Pod QoS Classes
 layout: two-cols-grid
 level: 2
+transition: slide-left
 ---
 
 ## [`Pod` Quality of Service Classes](https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/)

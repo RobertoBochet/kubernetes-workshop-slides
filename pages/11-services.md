@@ -1,6 +1,5 @@
 ---
 layout: two-cols
-transition: fade
 title: Services
 ---
 
@@ -32,7 +31,6 @@ kubectl run -it --image=alpine/curl --rm --restart=Never ottenitore -- http://ec
 -->
 
 ---
-transition: fade
 hideInToc: true
 ---
 
@@ -73,7 +71,6 @@ selector:
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -101,6 +98,7 @@ kubectl run -it --image=alpine/curl --rm --restart=Never --quiet ottenitore -- h
 ---
 layout: two-cols
 hideInToc: true
+transition: slide-left
 ---
 
 # [Services](https://kubernetes.io/docs/concepts/services-networking/service/)

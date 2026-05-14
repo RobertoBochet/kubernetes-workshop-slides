@@ -1,3 +1,7 @@
+---
+transition: slide-left
+---
+
 # What is Kubernetes?
 
 <v-clicks>
@@ -9,6 +13,7 @@ Kubernetes is an open-source container orchestration system for automating softw
 ---
 level: 2
 hideInToc: true
+transition: slide-left
 ---
 
 # How can I **safely** test Kubernetes?
@@ -50,6 +55,7 @@ kubectl controls the Kubernetes cluster manager.
 ---
 level: 2
 hideInToc: true
+transition: slide-left
 ---
 
 ## Let's use the glorified podman
@@ -90,6 +96,7 @@ Display one or many resources.
 layout: two-cols-header
 level: 2
 hideInToc: true
+transition: slide-left
 ---
 
 <div class="text-center">
@@ -142,6 +149,7 @@ it's no longer your responsibility</p>
 
 ---
 level: 2
+transition: slide-left
 ---
 
 # Kubernetes resources
@@ -161,6 +169,7 @@ metadata:
 
 ---
 hideInToc: true
+transition: slide-left
 ---
 
 ## Create a resource
@@ -180,6 +189,7 @@ JSON and YAML formats are accepted.
 layout: center
 class: text-center
 hideInToc: true
+transition: slide-left
 ---
 
 ## You require a resource...
@@ -192,6 +202,7 @@ hideInToc: true
 layout: center
 class: text-center
 hideInToc: true
+transition: slide-left
 ---
 
 ## ...a controller provisions it
@@ -204,6 +215,7 @@ hideInToc: true
 title: Operator pattern
 routeAlias: operator-pattern
 level: 2
+transition: slide-left
 ---
 
 ## [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
@@ -221,6 +233,7 @@ This is what makes Kubernetes really powerful
 
 ---
 hideInToc: true
+transition: slide-left
 ---
 
 # So, why should I use Kubernetes?

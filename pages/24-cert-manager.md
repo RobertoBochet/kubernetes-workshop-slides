@@ -1,5 +1,4 @@
 ---
-transition: fade
 title: cert-manager
 ---
 
@@ -36,7 +35,6 @@ kubectl get crds
 -->
 
 ---
-transition: fade
 level: 2
 hideInToc: true
 ---
@@ -64,7 +62,6 @@ The verifier of the certificate needs to trust only the [Root CA](https://en.wik
 
 ---
 layout: two-cols
-transition: fade
 title: Issuers
 level: 2
 ---
@@ -91,7 +88,6 @@ They represent certificate authorities (CAs) that are able to release X.509 cert
 
 ---
 layout: two-cols
-transition: fade
 title: Certificates
 level: 2
 ---
@@ -132,7 +128,6 @@ kubectl get secrets/selfsigned-example-tls -o jsonpath="{.data['tls\.crt']}" | b
 
 ---
 layout: two-cols-header
-transition: fade
 level: 2
 ---
 
@@ -169,7 +164,6 @@ is a protocol for automating interactions between [Certificate Authorities](http
 
 ---
 layout: two-cols-header
-transition: fade
 level: 3
 ---
 
@@ -189,7 +183,6 @@ So, the `cert-manager` operator needs to prove to the CA that it has control ove
 
 ---
 layout: two-cols-header
-transition: fade
 level: 3
 ---
 
@@ -223,7 +216,6 @@ The HTTP server must be exposed on the internet to allow the CA to complete the 
 
 ---
 layout: two-cols-header
-transition: fade
 level: 3
 ---
 
@@ -253,7 +245,6 @@ This kind of challenge can be used also for wildcard domains and domains without
 </NoteBox>
 
 ---
-transition: fade
 title: Issuers HTTP-01
 level: 2
 ---
@@ -265,7 +256,6 @@ level: 2
 <<<@/snippets/manifests/cert-manager/clusterissuer-letsencrypt-staging-http01.yaml yaml[clusterissuer-letsencrypt-staging-http01.yaml]{all|7|8|9-10|11-14|all}{lines:true}
 
 ---
-transition: fade
 title: Issuers DNS-01
 level: 2
 ---
@@ -284,7 +274,6 @@ For this challenge, `cert-manager` has to support your DNS provider (e.g., Cloud
 
 ---
 layout: two-cols
-transition: fade
 title: Ingresses over TLS
 level: 2
 ---
@@ -309,7 +298,6 @@ It is enough to provide the `Secret` containing the certificate
 
 ---
 layout: two-cols
-transition: fade
 level: 3
 ---
 
@@ -333,6 +321,7 @@ This behavior can be achieved by setting the `"cert-manager.io/cluster-issuer"` 
 ---
 title: Resources Workflow
 level: 2
+transition: slide-left
 ---
 
 # cert-manager Resources Workflow

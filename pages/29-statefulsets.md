@@ -1,7 +1,8 @@
 ---
-transition: fade
+
 layout: two-cols
 title: StatefulSets
+
 ---
 
 # [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
@@ -29,7 +30,6 @@ A `StatefulSet` requires an associated **headless** `Service`, to provide a stic
 <<< @/snippets/manifests/statefulsets/statefulset-echo-server.yaml yaml[statefulset-echo-server.yaml]{all|7|all}{lines:true,at:5}
 
 ---
-transition: fade
 layout: two-cols
 title: Headless Services
 level: 2
@@ -72,6 +72,7 @@ kubectl run -it --image tutum/dnsutils --rm dnsutils
 layout: two-cols
 title: StatefulSets pvc templates
 level: 2
+transition: slide-left
 ---
 
 # [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)

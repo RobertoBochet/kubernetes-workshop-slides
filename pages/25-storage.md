@@ -1,5 +1,4 @@
 ---
-transition: fade
 title: Storage
 ---
 
@@ -15,7 +14,6 @@ However, being designed for working in clusters, the storage field can quickly b
 
 ---
 layout: two-cols
-transition: fade
 title: Ephemeral volumes
 level: 2
 ---
@@ -53,7 +51,6 @@ kubectl exec -it pods/echo-server -- sh -c "mount | grep /cache"
 
 ---
 layout: two-cols
-transition: fade
 title: Host path volumes
 level: 2
 ---
@@ -83,7 +80,6 @@ minikube ssh cat /var/data/test
 
 ---
 layout: two-cols-header
-transition: fade
 title: Volume types
 level: 2
 ---
@@ -116,7 +112,6 @@ However, the current philosophy adopted by the Kubernetes development team is to
 
 ---
 layout: two-cols
-transition: fade
 title: PersistentVolumes
 level: 2
 ---
@@ -163,7 +158,6 @@ another resource is required in the process...
 
 ---
 layout: two-cols
-transition: fade
 title: PersistentVolumeClaims
 level: 2
 ---
@@ -194,7 +188,6 @@ This parameter will be explained later
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -228,7 +221,6 @@ minikube ssh cat /var/data/test
 -->
 
 ---
-transition: fade
 title: PersistentVolume provisioners
 level: 2
 ---
@@ -260,7 +252,6 @@ Once installed, each time a `PVC` is defined, the controller will create a suita
 
 ---
 layout: two-cols
-transition: fade
 title: StorageClasses
 level: 2
 ---
@@ -299,6 +290,7 @@ If a `PVC` is created without an explicit `storageClassName`, the default one wi
 ---
 layout: two-cols
 hideInToc: true
+transition: slide-left
 ---
 
 # [StorageClasses](https://kubernetes.io/docs/concepts/storage/storage-classes/)

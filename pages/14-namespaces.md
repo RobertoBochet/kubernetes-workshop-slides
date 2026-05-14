@@ -1,7 +1,6 @@
 ---
 layout: two-cols
 title: Namespaces
-transition: fade
 ---
 
 # [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
@@ -49,7 +48,6 @@ kubectl get --all-namespaces pods
 ---
 layout: two-cols
 hideInToc: true
-transition: fade
 ---
 
 # [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
@@ -72,6 +70,7 @@ This example results in a `Pod` with the status `CreateContainerConfigError` and
 
 ---
 hideInToc: true
+transition: slide-left
 ---
 
 # [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)

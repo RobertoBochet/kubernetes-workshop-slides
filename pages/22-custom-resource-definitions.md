@@ -1,6 +1,5 @@
 ---
 layout: two-cols
-transition: fade
 title: Custom Resource Definitions
 ---
 
@@ -16,7 +15,6 @@ Several operators that can be installed as `helm charts` provide their own `CRDs
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -81,6 +79,7 @@ kubectl get crds
 ---
 layout: two-cols
 hideInToc: true
+transition: slide-left
 ---
 
 # [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions)

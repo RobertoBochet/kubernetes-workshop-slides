@@ -1,7 +1,6 @@
 ---
 layout: two-cols
 title: ConfigMaps and Secrets
-transition: fade
 ---
 
 # [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) and [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
@@ -46,7 +45,6 @@ purge.sh: |
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -64,7 +62,6 @@ They can be used to store non-confidential configurations, like scripts
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -96,7 +93,6 @@ kubectl run -it --image=alpine/curl --rm --restart=Never --quiet ottenitore -- h
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -127,7 +123,6 @@ kubectl exec pods/echo-server -- ls -al /scripts
 
 ---
 layout: two-cols
-transition: fade
 hideInToc: true
 ---
 
@@ -156,6 +151,7 @@ The two secrets shown on the right are equivalent
 ---
 layout: two-cols
 hideInToc: true
+transition: slide-left
 ---
 
 # [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
